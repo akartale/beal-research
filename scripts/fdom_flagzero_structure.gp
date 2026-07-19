@@ -1,0 +1,17 @@
+default(parisizemax,"8G");
+out=fileopen("/workspace/research/beal/data/fdom_flagzero_structure.txt","w");
+read("/workspace/research/beal/scripts/quaternion_7p3_eichler_lib.gp");
+levellattice=alglatinter(beala,alglatinter(beala,bealo,bealthreepath[2]),bealsevenpath[2]);
+read("fdom.gp");
+xx=afuchinit(beala,levellattice[1],0,0);
+filewrite(out,Str("XLEN=",#xx));
+for(i=1,#xx,
+  if(type(xx[i])=="t_VEC"||type(xx[i])=="t_COL"||type(xx[i])=="t_MAT",
+    filewrite(out,Str("X",i,"=",type(xx[i]),",len=",#xx[i])),
+    filewrite(out,Str("X",i,"=",type(xx[i]),",value=",xx[i]))
+  )
+);
+filewrite(out,Str("FDOMDAT=",xx[12]));
+filewrite(out,Str("GDAT=",xx[11]));
+filewrite(out,Str("QFMATS_TYPES=",vector(#xx[10],i,type(xx[10][i]))));
+fileclose(out);quit;

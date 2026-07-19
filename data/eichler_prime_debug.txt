@@ -1,0 +1,7 @@
+M3_1=[1, 0; 0, 1]
+Z3=0
+LIFT3=0
+ERR_COND3=error("forbidden division t_FFELT % t_INT.")
+M7_1=[1, 0; 0, 1]
+Z7=0
+ERR_COND7=error("forbidden division t_FFELT % t_INT.")

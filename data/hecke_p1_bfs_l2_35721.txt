@@ -1,0 +1,8 @@
+LIB_bealk=t_VEC
+LIB_beala=t_VEC
+LIB_bealo=t_VEC
+KERNEL_INDEX=3
+ORBIT_SIZE=9
+MAX_INVERSE_WORD_LENGTH=1
+WORDS_POINT_TO_KERNEL=[[-21], [-24], [], [-3], [-11], [-6], [-1], [-5], [-12]]
+POINTS=[[1, 0], [1, 1], [1, qa], [1, qa + 1], [1, qa^2], [1, qa^2 + 1], [1, qa^2 + qa], [1, qa^2 + qa + 1], [0, 1]]

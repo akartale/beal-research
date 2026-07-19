@@ -1,0 +1,16 @@
+default(parisizemax,"4G");
+x='x;
+K=bnfinit(x^3+x^2-2*x-1);
+P3=idealprimedec(K,3);
+P7=idealprimedec(K,7);
+out=fileopen("research/beal/data/field_7p3_metadata.txt","w");
+filewrite(out,Str("POL=",K.pol));
+filewrite(out,Str("DISC=",nfdisc(K.pol)));
+filewrite(out,Str("CLASSNO=",K.no));
+filewrite(out,Str("P3=",P3));
+filewrite(out,Str("P7=",P7));
+filewrite(out,Str("P3_NORMS=",vector(#P3,i,idealnorm(K,P3[i]))));
+filewrite(out,Str("P7_NORMS=",vector(#P7,i,idealnorm(K,P7[i]))));
+fileclose(out);
+print("field metadata: OK");
+quit;

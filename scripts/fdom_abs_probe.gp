@@ -1,0 +1,1 @@
+o=fileopen("/workspace/research/beal/data/fdom_abs_probe.txt","w");filewrite(o,"ok");fileclose(o);quit;

@@ -1,0 +1,25 @@
+default(parisize,"256M");
+default(parisizemax,"3G");
+read("/workspace/research/beal/data/fdom_level35721_tuned.txt");
+out=fileopen("/workspace/research/beal/data/fdom_presentation_h1_35721.txt","w");
+P=PRESENTATION;
+ng=#P[1];
+nr=#P[2];
+R=matrix(nr,ng);
+for(i=1,nr,
+  w=P[2][i];
+  for(j=1,#w,
+    k=w[j];
+    R[i,abs(k)]+=if(k>0,1,-1)
+  )
+);
+rr=matrank(R);
+filewrite(out,Str("GENERATORS=",ng));
+filewrite(out,Str("RELATIONS=",nr));
+filewrite(out,Str("MIN_RELATION_LENGTH=",vecmin(vector(nr,i,#P[2][i]))));
+filewrite(out,Str("MAX_RELATION_LENGTH=",vecmax(vector(nr,i,#P[2][i]))));
+filewrite(out,Str("ABELIANIZATION_RELATION_RANK=",rr));
+filewrite(out,Str("H1_RANK=",ng-rr));
+filewrite(out,Str("NONZERO_EXPONENT_ENTRIES=",sum(i=1,nr,sum(j=1,ng,R[i,j]!=0))));
+fileclose(out);
+quit;

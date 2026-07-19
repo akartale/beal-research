@@ -1,0 +1,14 @@
+START=1
+LIB_bealk=t_VEC
+LIB_beala=t_VEC
+LIB_bealo=t_VEC
+TYPE_beala=t_VEC
+TYPE_bealo=t_VEC
+TYPE_bealthreepath=t_VEC
+ORDER_INDEX=35721
+FDOM_LOADED=1
+ORDER_VALID=1
+ORDER_LEVEL=[63, 0, 45; 0, 63, 18; 0, 0, 9]
+MAX_AFUCH_LEN=18
+AFUCH_OBJECT_LEN=18
+AFUCH_ERROR=error("Please initialize the fundamental domain first with X = afuchmakefdom(X)..")

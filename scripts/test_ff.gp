@@ -1,0 +1,1 @@
+T=ffinit(7,12,'t); a=ffgen(T,'a); g=ffprimroot(a); print(fforder(g)); z=g^((7^12-1)/180); print(fforder(z)); print(z^180);

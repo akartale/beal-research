@@ -1,0 +1,1 @@
+p=11; A=1; B=1; P=Mod(5,p)*x^6-Mod(12*A,p)*x^5-Mod(10*B^5,p)*x^3+Mod(B^10,p); print(hyperellcharpoly(P));

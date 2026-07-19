@@ -1,0 +1,25 @@
+default(parisize,"256M");
+default(parisizemax,"3G");
+default(realprecision,100);
+default(debug,1);
+out=fileopen("/workspace/research/beal/data/fdom_level35721_tuned.txt","w");
+filewrite(out,"START=1");
+read("/workspace/research/beal/scripts/quaternion_7p3_eichler_lib_hilbert.gp");
+levellattice=alglatinter(beala,alglatinter(beala,bealo,bealthreepath[2]),bealsevenpath[2]);
+read("fdom.gp");
+xx=afuchinit(beala,levellattice[1],0,0);
+xx[12][5]=2048;
+filewrite(out,Str("AREA_OVER_PI=",bestappr(xx[12][1]/Pi,10^8)));
+filewrite(out,Str("FDOMDAT=",xx[12]));
+runtuned()=
+{ xx=afuchmakefdom(xx);
+  filewrite(out,Str("OBJECT_LEN=",#xx));
+  filewrite(out,Str("AREA=",afucharea(xx)));
+  filewrite(out,Str("SIGNATURE=",afuchsignature(xx)));
+  filewrite(out,Str("SIDES=",#afuchsides(xx)));
+  filewrite(out,Str("PRESENTATION=",afuchpresentation(xx)));
+  1
+}
+iferr(runtuned(),err,filewrite(out,Str("ERROR=",err)));
+filewrite(out,"END=1");
+fileclose(out);quit;

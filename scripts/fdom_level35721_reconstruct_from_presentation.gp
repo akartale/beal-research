@@ -1,0 +1,16 @@
+default(parisize,"512M");
+default(parisizemax,"3G");
+out=fileopen("/workspace/research/beal/data/fdom_level35721_reconstruct_v2.log","w");
+read("/workspace/research/beal/scripts/quaternion_7p3_eichler_lib.gp");
+read("/workspace/research/beal/vendor/fdom-memory-reduced/load_memory_reduced.gp");
+read("/workspace/research/beal/data/fdom_level35721_tuned.txt");
+levellattice=alglatinter(beala,alglatinter(beala,bealo,bealthreepath[2]),bealsevenpath[2]);
+G=PRESENTATION[1];
+xx=afuchinit(beala,levellattice[1],0,0);
+xx[12][5]=2048;
+filewrite(out,Str("START=1 GENERATORS=",#G));
+xx=afuchmakefdom_fromelts(xx,G);
+filewrite(out,Str("RECONSTRUCT_OK=1 SIGNATURE=",afuchsignature(xx)," SIDES=",#afuchsides(xx)," GENERATORS=",#afuchpresentation(xx)[1]));
+writebin("/workspace/research/beal/data/fdom_level35721_reconstructed_xx_v2.bin",xx);
+fileclose(out);
+quit;

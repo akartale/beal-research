@@ -1,0 +1,33 @@
+default(parisize,"512M");
+default(parisizemax,"3G");
+out=fileopen("/workspace/research/beal/data/hecke_transitions_l2_35721.txt","w");
+read("/workspace/research/beal/scripts/quaternion_7p3_eichler_lib_hilbert.gp");
+runtrans()={
+  my(O,P,alpha,inds,reps=vector(9),trans,beta,delta,c,hits,totalhits=0,badnorm=0,sample=0);
+  O=alglatinter(beala,alglatinter(beala,bealo,bealthreepath[2]),bealsevenpath[2]);
+  read("/workspace/research/beal/data/fdom_level35721_tuned.txt");P=PRESENTATION;
+  alpha=[84375348026710,56753615930793,42172478281059,32573379187888,15907250900642,27509664693825,51054269144031,49197166096933,71208765229897,46624317430880,72803325709437,-85201653337709]~;
+  inds=[21,24,0,3,11,6,1,5,12];
+  for(i=1,9,reps[i]=if(inds[i]==0,alpha,algmul(beala,alginv(beala,P[1][inds[i]]),alpha)));
+  trans=matrix(9,#P[1]);
+  for(i=1,9,for(g=1,#P[1],
+    beta=algmul(beala,reps[i],P[1][g]);hits=0;
+    for(j=1,9,
+      delta=algmul(beala,alginv(beala,reps[j]),beta);
+      if(alglatcontains(beala,O,delta,&c),hits++;trans[i,g]=j;
+        if(algnorm(beala,delta)!=1,badnorm++);
+        if(sample==0,sample=[i,g,j,delta])
+      )
+    );
+    totalhits+=hits;if(hits!=1,error(Str("nonunique i=",i," g=",g," hits=",hits)))
+  ));
+  filewrite(out,Str("ROWS=",matsize(trans)[1]));
+  filewrite(out,Str("COLS=",matsize(trans)[2]));
+  filewrite(out,Str("TOTAL_UNIQUE_TRANSITIONS=",totalhits));
+  filewrite(out,Str("BAD_NORMS=",badnorm));
+  filewrite(out,Str("SAMPLE_I_G_J_DELTA=",sample));
+  filewrite(out,Str("TRANSITIONS=",trans));
+  1
+};
+iferr(runtrans(),err,filewrite(out,Str("ERROR=",err)));
+fileclose(out);quit;

@@ -1,0 +1,17 @@
+ARCH=aarch64
+PLATFORM=Linux-6.8.0-1057-oracle-aarch64-with-glibc2.36
+PYTHON=3.11.2 (main, Apr  8 2026, 01:58:00) [GCC 12.2.0]
+curl=/usr/bin/curl
+wget=None
+dpkg-deb=/usr/bin/dpkg-deb
+ar=None
+tar=/usr/bin/tar
+xz=None
+zstd=None
+make=None
+gcc=None
+cc=None
+clang=None
+gp=None
+URL_OK=https://deb.debian.org/debian/dists/stable/Release STATUS=200 PREFIX=b'Origin: Debian\nLabel: Debian\nSuite: stable\nVersion: 13.6\nCodename: trixie\nChange'
+URL_OK=https://pari.math.u-bordeaux.fr/pub/pari/unix/ STATUS=200 PREFIX=b'<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/st'

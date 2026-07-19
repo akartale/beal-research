@@ -1,0 +1,20 @@
+default(parisize,"512M");
+default(parisizemax,"3G");
+default(realprecision,100);
+install(afuchfindoneelt_raw,"GD1,G,DG",,"./libfdom-2-15-2.so");
+out=fileopen("/workspace/research/beal/data/hecke_alpha_norm2_35721.txt","w");
+read("/workspace/research/beal/scripts/quaternion_7p3_eichler_lib_hilbert.gp");
+runfind()={
+  my(O,X,alpha,c);
+  O=alglatinter(beala,alglatinter(beala,bealo,bealthreepath[2]),bealsevenpath[2]);
+  X=afuchinit(beala,O[1],0,0);
+  filewrite(out,"INIT_OK=1");
+  alpha=afuchfindoneelt_raw(X,2);
+  filewrite(out,Str("ALPHA=",alpha));
+  filewrite(out,Str("NORM=",algnorm(beala,alpha)));
+  filewrite(out,Str("IN_ORDER=",alglatcontains(beala,O,alpha,&c)));
+  filewrite(out,Str("COORDS=",c));
+  1
+};
+iferr(runfind(),err,filewrite(out,Str("ERROR=",err)));
+fileclose(out); quit;

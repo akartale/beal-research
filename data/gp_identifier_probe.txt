@@ -1,0 +1,3 @@
+bealK=5,t_INT
+bealk=6,t_INT
+foo_bar=7,t_INT

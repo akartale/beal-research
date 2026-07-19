@@ -1,0 +1,21 @@
+ELF64_ENDIAN=LE
+SECTIONS=27
+.dynsym=PRESENT COUNT=299
+.dynsym:afuchword:bind=1:type=2:shndx=11:size=4408
+.dynsym:afuchminimalcycles:bind=1:type=2:shndx=11:size=644
+.dynsym:afuchmakefdom:bind=1:type=2:shndx=11:size=9524
+.symtab=PRESENT COUNT=435
+.symtab:afuchword:bind=1:type=2:shndx=11:size=4408
+.symtab:afuchmakefdom:bind=1:type=2:shndx=11:size=9524
+.symtab:afuchminimalcycles:bind=1:type=2:shndx=11:size=644
+afuchfdom_subgroup=NOT_FOUND
+afuchfdom_worker=NOT_FOUND
+afuchmakefdom=FOUND
+afuchmakefdom_fromelts=NOT_FOUND
+afuchminimalcycles=FOUND
+afuchword=FOUND
+elliptic=NOT_FOUND
+minimalcycles_bytype=NOT_FOUND
+normbasis=NOT_FOUND
+presentation=NOT_FOUND
+signature=NOT_FOUND

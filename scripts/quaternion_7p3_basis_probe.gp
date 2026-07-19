@@ -1,0 +1,16 @@
+default(parisizemax,"4G");
+y='y;x='x;a='a;K=nfinit(y^3+y^2-2*y-1);A=alginit(K,[2,[[],[]],[1/2,1/2,0]],x);
+B=algbasis(A);mt=algmultable(A);
+PreimageLattice(M,p)={my(n,Kmod,G);n=matsize(M)[2];Kmod=lift(matkermod(lift(M),p));G=concat(Kmod,p*matid(n));mathnf(G)}
+T3=algtableinit(mt,3);S3=algsplit(T3,a);cond3=matinvmod(S3[2],3)[7..9,];H3=PreimageLattice(cond3,3);
+T7f=algtableinit(mt,7);Q=algquotient(T7f,algradical(T7f),1);S7=algsplit(Q[1],a);cond7=(matinvmod(S7[2],7)*Q[2])[3..3,];H7=PreimageLattice(cond7,7);
+OId=alglathnf(A,matid(12));OB=alglathnf(A,B);E3Id=alglathnf(A,H3);E3B=alglathnf(A,B*H3);E7Id=alglathnf(A,H7);E7B=alglathnf(A,B*H7);
+out=fileopen("research/beal/data/eichler_basis_probe.txt","w");
+filewrite(out,Str("OID_CLOSED=",alglatsubset(A,alglatmul(A,OId,OId),OId)));
+filewrite(out,Str("OB_CLOSED=",alglatsubset(A,alglatmul(A,OB,OB),OB)));
+filewrite(out,Str("OID_OB_INDEX=",alglatindex(A,OId,OB)));
+filewrite(out,Str("E3ID_CLOSED=",alglatsubset(A,alglatmul(A,E3Id,E3Id),E3Id)));
+filewrite(out,Str("E3B_CLOSED=",alglatsubset(A,alglatmul(A,E3B,E3B),E3B)));
+filewrite(out,Str("E7ID_CLOSED=",alglatsubset(A,alglatmul(A,E7Id,E7Id),E7Id)));
+filewrite(out,Str("E7B_CLOSED=",alglatsubset(A,alglatmul(A,E7B,E7B),E7B)));
+fileclose(out);quit;

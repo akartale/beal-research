@@ -1,0 +1,1 @@
+bnf=bnfinit(x^2-x-1); P3=idealfactor(bnf,3)[1,1]; P5=idealfactor(bnf,5)[1,1]; m=idealmul(bnf,idealpow(bnf,P3,3),idealpow(bnf,P5,3)); bnr=bnrinit(bnf,[m,[1,1]],1); print(bnr.cyc); P=idealfactor(bnf,11)[1,1]; print(P); print(bnrisprincipal(bnr,P,0)); quit;

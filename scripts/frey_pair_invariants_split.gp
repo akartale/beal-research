@@ -1,0 +1,3 @@
+seventh_residue_exists(n,l)={my(c);for(c=1,l-1,if((c^7-n)%l==0,return(1)));return(0)};
+scanprime(l)={my(S=List(),A,B,n,P,cp,c1,c2,disc);for(A=1,l-1,for(B=1,l-1,n=(A^3+B^5)%l;if(n!=0&&seventh_residue_exists(n,l),P=Mod(5,l)*x^6-Mod(12*A,l)*x^5-Mod(10*B^5,l)*x^3+Mod(B^10,l);disc=lift(poldisc(P));if(disc%l!=0,cp=hyperellcharpoly(P);c1=polcoef(cp,3);c2=polcoef(cp,2);listput(S,[(-c1)%7,(c2-2*l)%7])))));print(l," ",Set(Vec(S)))};
+forprime(l=11,83,if(kronecker(5,l)==1&&l!=5&&l!=7,scanprime(l)));

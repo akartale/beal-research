@@ -1,0 +1,16 @@
+default(parisizemax,"4G");
+y='y;x='x;a='a;
+out=fileopen("research/beal/data/eichler_prime_debug.txt","w");
+K=nfinit(y^3+y^2-2*y-1);
+A=alginit(K,[2,[[],[]],[1/2,1/2,0]],x);
+mt=algmultable(A);
+T3=algtableinit(mt,3);S3=algsplit(T3,a);
+filewrite(out,Str("M3_1=",S3[1][1]));
+iferr(z3=S3[1][1][2,1];filewrite(out,Str("Z3=",z3));filewrite(out,Str("LIFT3=",lift(z3))),E,filewrite(out,Str("ERR_Z3=",E)));
+iferr(cond3=matrix(3,12,k,i,lift(polcoef(lift(S3[1][i][2,1]),k-1))%3);filewrite(out,Str("COND3=",cond3)),E,filewrite(out,Str("ERR_COND3=",E)));
+T7full=algtableinit(mt,7);R7=algradical(T7full);Q7data=algquotient(T7full,R7,1);
+T7=Q7data[1];proj7=Q7data[2];S7=algsplit(T7,a);
+filewrite(out,Str("M7_1=",S7[1][1]));
+iferr(z7=(S7[1]*proj7[,1])[2,1];filewrite(out,Str("Z7=",z7)),E,filewrite(out,Str("ERR_Z7=",E)));
+iferr(cond7=matrix(1,12,k,i,lift((S7[1]*proj7[,i])[2,1])%7);filewrite(out,Str("COND7=",cond7)),E,filewrite(out,Str("ERR_COND7=",E)));
+fileclose(out);quit;

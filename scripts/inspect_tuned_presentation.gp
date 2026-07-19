@@ -1,0 +1,16 @@
+default(parisize,"256M");
+read("/workspace/research/beal/data/fdom_level35721_tuned.txt");
+out=fileopen("/workspace/research/beal/data/tuned_presentation_structure.txt","w");
+filewrite(out,Str("P_TYPE=",type(PRESENTATION)));
+filewrite(out,Str("P_LEN=",#PRESENTATION));
+for(i=1,#PRESENTATION,
+  filewrite(out,Str("P",i,"_TYPE=",type(PRESENTATION[i])));
+  if(type(PRESENTATION[i])=="t_VEC"||type(PRESENTATION[i])=="t_VECSMALL"||type(PRESENTATION[i])=="t_MAT",
+    filewrite(out,Str("P",i,"_LEN=",#PRESENTATION[i]))
+  )
+);
+if(#PRESENTATION>=3,
+  filewrite(out,Str("P3_PREFIX=",PRESENTATION[3][1..min(30,#PRESENTATION[3])]))
+);
+fileclose(out);
+quit;

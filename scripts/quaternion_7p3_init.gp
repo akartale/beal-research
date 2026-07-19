@@ -1,0 +1,14 @@
+default(parisizemax,"4G");
+y='y;x='x;
+K=nfinit(y^3+y^2-2*y-1);
+A=alginit(K,[2,[[],[]],[1/2,1/2,0]],x);
+out=fileopen("research/beal/data/quaternion_7p3_metadata.txt","w");
+filewrite(out,Str("HASSE_REAL=",alghassei(A)));
+filewrite(out,Str("HASSE_FINITE=",alghassef(A)));
+filewrite(out,Str("DEGREE=",algdegree(A)));
+filewrite(out,Str("DIMENSION=",algdim(A)));
+filewrite(out,Str("DISCRIMINANT=",algdisc(A)));
+filewrite(out,Str("MAXIMAL_ORDER_BASIS=",algbasis(A)));
+fileclose(out);
+print("indefinite quaternion maximal order: OK");
+quit;

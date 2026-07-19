@@ -1,0 +1,23 @@
+default(parisizemax,"8G");
+out=fileopen("/workspace/research/beal/data/fdom_level35721_full.txt","w");
+filewrite(out,"START=1");
+read("/workspace/research/beal/scripts/quaternion_7p3_eichler_lib.gp");
+levellattice=alglatinter(beala,alglatinter(beala,bealo,bealthreepath[2]),bealsevenpath[2]);
+filewrite(out,Str("ORDER_INDEX=",alglatindex(beala,levellattice,bealo)));
+read("fdom.gp");
+filewrite(out,Str("ORDER_VALID=",algisorder(beala,levellattice[1])));
+filewrite(out,Str("ORDER_LEVEL=",algorderlevel(beala,levellattice[1],0)));
+runfull()=
+{ my(z);
+  filewrite(out,"AFUCH_BEGIN=1");
+  z=afuchinit(beala,levellattice[1],0,1);
+  filewrite(out,Str("AFUCH_OBJECT_LEN=",#z));
+  filewrite(out,Str("AFUCH_AREA=",afucharea(z)));
+  filewrite(out,Str("AFUCH_SIGNATURE=",afuchsignature(z)));
+  filewrite(out,Str("AFUCH_SIDES=",#afuchsides(z)));
+  filewrite(out,Str("AFUCH_PRESENTATION=",afuchpresentation(z)));
+  1
+}
+iferr(runfull(),err,filewrite(out,Str("AFUCH_ERROR=",err)));
+filewrite(out,"END=1");
+fileclose(out);quit;

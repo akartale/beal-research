@@ -1,0 +1,23 @@
+default(parisize,"512M");
+default(parisizemax,"3G");
+out=fileopen("/workspace/research/beal/data/hecke_right_kernel_reps_l2_35721.txt","w");
+read("/workspace/research/beal/scripts/quaternion_7p3_eichler_lib_hilbert.gp");
+runreps()={
+ my(O,mt,T,S,elts,pts,P,alpha,c,M,rep,ker,keys=List(),reps=List(),labels=List(),key,v);
+ O=alglatinter(beala,alglatinter(beala,bealo,bealthreepath[2]),bealsevenpath[2]);
+ mt=bealmultable(O);T=algtableinit(mt,2);S=algsplit(T,qa);
+ elts=Set(concat(vector(#S[1],i,concat(Vec(S[1][i])))));pts=concat(vector(#elts,i,[1,elts[i]]),[[0,1]]);
+ read("/workspace/research/beal/data/fdom_level35721_tuned.txt");P=PRESENTATION;
+ alpha=[84375348026710,56753615930793,42172478281059,32573379187888,15907250900642,27509664693825,51054269144031,49197166096933,71208765229897,46624317430880,72803325709437,-85201653337709]~;
+ for(s=0,2*#P[1],
+   rep=if(s==0,alpha,if(s<=#P[1],algmul(beala,alpha,P[1][s]),algmul(beala,alpha,alginv(beala,P[1][s-#P[1]]))));
+   alglatcontains(beala,O,rep,&c);M=matrix(2,2);for(i=1,12,M+=Mod(c[i],2)*S[1][i]);
+   ker=0;for(k=1,#pts,v=M*pts[k]~;if(v==[0,0]~,ker=k));
+   key=ker;if(!setsearch(Set(Vec(keys)),key),listput(keys,key);listput(reps,rep);listput(labels,if(s==0,0,if(s<=#P[1],s,-(s-#P[1])))));
+   if(#keys==9,break)
+ );
+ filewrite(out,Str("COUNT=",#keys));filewrite(out,Str("RIGHT_KERNELS=",Vec(keys)));
+ filewrite(out,Str("LABELS=",Vec(labels)));filewrite(out,Str("NORMS=",vector(#reps,i,algnorm(beala,reps[i]))));
+ filewrite(out,Str("REPRESENTATIVES=",Vec(reps)));1
+};
+iferr(runreps(),err,filewrite(out,Str("ERROR=",err)));fileclose(out);quit;

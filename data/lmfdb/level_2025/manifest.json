@@ -1,0 +1,128 @@
+[
+  {
+    "label": "2.2.5.1-2025.1-a",
+    "dimension": 1,
+    "is_CM": "no",
+    "is_base_change": "yes",
+    "source": "https://www.lmfdb.org/ModularForm/GL2/TotallyReal/2.2.5.1/holomorphic/2.2.5.1-2025.1-a/download/sage",
+    "file": "research/beal/data/lmfdb/level_2025/2.2.5.1-2025.1-a.sage",
+    "valid": true
+  },
+  {
+    "label": "2.2.5.1-2025.1-b",
+    "dimension": 1,
+    "is_CM": "no",
+    "is_base_change": "yes",
+    "source": "https://www.lmfdb.org/ModularForm/GL2/TotallyReal/2.2.5.1/holomorphic/2.2.5.1-2025.1-b/download/sage",
+    "file": "research/beal/data/lmfdb/level_2025/2.2.5.1-2025.1-b.sage",
+    "valid": true
+  },
+  {
+    "label": "2.2.5.1-2025.1-c",
+    "dimension": 1,
+    "is_CM": "yes",
+    "is_base_change": "yes",
+    "source": "https://www.lmfdb.org/ModularForm/GL2/TotallyReal/2.2.5.1/holomorphic/2.2.5.1-2025.1-c/download/sage",
+    "file": "research/beal/data/lmfdb/level_2025/2.2.5.1-2025.1-c.sage",
+    "valid": true
+  },
+  {
+    "label": "2.2.5.1-2025.1-d",
+    "dimension": 1,
+    "is_CM": "yes",
+    "is_base_change": "yes",
+    "source": "https://www.lmfdb.org/ModularForm/GL2/TotallyReal/2.2.5.1/holomorphic/2.2.5.1-2025.1-d/download/sage",
+    "file": "research/beal/data/lmfdb/level_2025/2.2.5.1-2025.1-d.sage",
+    "valid": true
+  },
+  {
+    "label": "2.2.5.1-2025.1-e",
+    "dimension": 1,
+    "is_CM": "yes",
+    "is_base_change": "yes",
+    "source": "https://www.lmfdb.org/ModularForm/GL2/TotallyReal/2.2.5.1/holomorphic/2.2.5.1-2025.1-e/download/sage",
+    "file": "research/beal/data/lmfdb/level_2025/2.2.5.1-2025.1-e.sage",
+    "valid": true
+  },
+  {
+    "label": "2.2.5.1-2025.1-f",
+    "dimension": 1,
+    "is_CM": "no",
+    "is_base_change": "yes",
+    "source": "https://www.lmfdb.org/ModularForm/GL2/TotallyReal/2.2.5.1/holomorphic/2.2.5.1-2025.1-f/download/sage",
+    "file": "research/beal/data/lmfdb/level_2025/2.2.5.1-2025.1-f.sage",
+    "valid": true
+  },
+  {
+    "label": "2.2.5.1-2025.1-g",
+    "dimension": 2,
+    "is_CM": "no",
+    "is_base_change": "no",
+    "source": "https://www.lmfdb.org/ModularForm/GL2/TotallyReal/2.2.5.1/holomorphic/2.2.5.1-2025.1-g/download/sage",
+    "file": "research/beal/data/lmfdb/level_2025/2.2.5.1-2025.1-g.sage",
+    "valid": true
+  },
+  {
+    "label": "2.2.5.1-2025.1-h",
+    "dimension": 2,
+    "is_CM": "yes",
+    "is_base_change": "no",
+    "source": "https://www.lmfdb.org/ModularForm/GL2/TotallyReal/2.2.5.1/holomorphic/2.2.5.1-2025.1-h/download/sage",
+    "file": "research/beal/data/lmfdb/level_2025/2.2.5.1-2025.1-h.sage",
+    "valid": true
+  },
+  {
+    "label": "2.2.5.1-2025.1-i",
+    "dimension": 2,
+    "is_CM": "no",
+    "is_base_change": "no",
+    "source": "https://www.lmfdb.org/ModularForm/GL2/TotallyReal/2.2.5.1/holomorphic/2.2.5.1-2025.1-i/download/sage",
+    "file": "research/beal/data/lmfdb/level_2025/2.2.5.1-2025.1-i.sage",
+    "valid": true
+  },
+  {
+    "label": "2.2.5.1-2025.1-j",
+    "dimension": 2,
+    "is_CM": "no",
+    "is_base_change": "no",
+    "source": "https://www.lmfdb.org/ModularForm/GL2/TotallyReal/2.2.5.1/holomorphic/2.2.5.1-2025.1-j/download/sage",
+    "file": "research/beal/data/lmfdb/level_2025/2.2.5.1-2025.1-j.sage",
+    "valid": true
+  },
+  {
+    "label": "2.2.5.1-2025.1-k",
+    "dimension": 2,
+    "is_CM": "no",
+    "is_base_change": "no",
+    "source": "https://www.lmfdb.org/ModularForm/GL2/TotallyReal/2.2.5.1/holomorphic/2.2.5.1-2025.1-k/download/sage",
+    "file": "research/beal/data/lmfdb/level_2025/2.2.5.1-2025.1-k.sage",
+    "valid": true
+  },
+  {
+    "label": "2.2.5.1-2025.1-l",
+    "dimension": 2,
+    "is_CM": "yes",
+    "is_base_change": "no",
+    "source": "https://www.lmfdb.org/ModularForm/GL2/TotallyReal/2.2.5.1/holomorphic/2.2.5.1-2025.1-l/download/sage",
+    "file": "research/beal/data/lmfdb/level_2025/2.2.5.1-2025.1-l.sage",
+    "valid": true
+  },
+  {
+    "label": "2.2.5.1-2025.1-m",
+    "dimension": 2,
+    "is_CM": "no",
+    "is_base_change": "no",
+    "source": "https://www.lmfdb.org/ModularForm/GL2/TotallyReal/2.2.5.1/holomorphic/2.2.5.1-2025.1-m/download/sage",
+    "file": "research/beal/data/lmfdb/level_2025/2.2.5.1-2025.1-m.sage",
+    "valid": true
+  },
+  {
+    "label": "2.2.5.1-2025.1-n",
+    "dimension": 2,
+    "is_CM": "no",
+    "is_base_change": "no",
+    "source": "https://www.lmfdb.org/ModularForm/GL2/TotallyReal/2.2.5.1/holomorphic/2.2.5.1-2025.1-n/download/sage",
+    "file": "research/beal/data/lmfdb/level_2025/2.2.5.1-2025.1-n.sage",
+    "valid": true
+  }
+]
