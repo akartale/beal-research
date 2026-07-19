@@ -60,16 +60,29 @@ irreducibility bound used elsewhere in Theorem B; once p=7 absolute
 irreducibility is supplied by our separate argument, this local elimination
 is available at p=7.
 
-## Final status
+## Current status
 
-The special-disk calculations and finite-Honda comparison are now assembled in
+The verified local calculations now cover every candidate/branch pair:
 
-    P7_LEVEL2025_FINAL_LOCAL_LEMMA.md.
+- `t=0`: `h,l` are eliminated by divided-Frobenius rank, while `e` is
+  eliminated by the exact auxiliary-prime branch sieve;
+- `t=infinity`: `e` is eliminated by the intrinsic normalized q-Frobenius
+  trace, while `h,l` are eliminated by divided-Frobenius rank on the proper
+  genus-2 crystalline submodule;
+- `t=1`: all three forms are eliminated by the totally toric rank-two
+  degeneration and its cyclotomic submodule;
+- `t mod 7 in {2,3,4,5,6}`: the smooth Frey reductions are ordinary, whereas
+  all three candidate forms are nonordinary.
 
-They eliminate `e` in the infinity disk by ordinary versus p-rank-zero
-incompatibility, and eliminate `h,l` in the t=0 disk by the rank of divided
-Frobenius.  The h/l argument is local: two crystalline CM inductions from the
-same unramified quadratic extension with the same labelled Hodge--Tate weights
-differ by an unramified unit twist, which preserves the rank invariant.
+For the infinity comparison, the even-degree PARI space has basis
+`e_i=X^(i-1)dX/(2Y)`, `1<=i<=5`.  The residue map at the two points at infinity
+is the `e_3` coefficient, so the proper crystalline lattice is the
+Frobenius-stable kernel `<e_1,e_2,e_4,e_5>`.  On this lattice the divided
+lower-left block has rank 2 for every infinity residue class, while the CM
+model for `h,l` has rank 1; unramified unit twists preserve this rank.  See
+`P7_INFINITY_HL_DIVIDED_FROBENIUS.md`.
 
-Therefore the three candidates are eliminated in the special disks `t=0` and `t=infinity`.  The generic unit-disk branch remains open unless an independent argument forces a primitive solution into one of the special disks.
+Thus the three level-2025 candidates are eliminated in every local branch at
+7, subject to the stated standard finite-Honda, residue-sequence, CM-twist, and
+Raynaud inputs.  This closes level `(2,2)` only.  The other Step-IV levels and
+the full signature-(3,5,7) theorem remain open.

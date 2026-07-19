@@ -115,14 +115,25 @@ cover all primitive solutions.
 
 ## Exact logical status
 
-At level `(2,2)`, norm 2025, the three candidates are eliminated in the special 7-adic disks `t=0` and `t=infinity`; see `P7_LEVEL2025_FINAL_LOCAL_LEMMA.md`.  The generic unit-disk branch is still open.  The official candidate inventory for
-all four levels is recorded in `P7_STEP_IV_CANDIDATE_INVENTORY.md`.
+At level `(2,2)`, norm 2025, the verified local arguments eliminate all three
+candidate forms in every 7-adic branch.  The last cross-branch, `h,l` at
+`t=infinity`, is separated by the rank of divided Frobenius on the proper
+four-dimensional crystalline lattice: rank 2 for every Frey infinity class
+and rank 1 for the CM local systems.  The `e`, `t=0` branch is reproducibly
+eliminated by `scripts/p7_form_e_exact_branches.py`, with no compatible branch
+polynomial at auxiliary prime `ell=11`.
+
+See `P7_LEVEL2025_FINAL_LOCAL_LEMMA.md`,
+`P7_INFINITY_HL_DIVIDED_FROBENIUS.md`,
+`P7_FORM_E_QFROBENIUS_INTRINSICNESS.md`, and
+`P7_T1_TORIC_ELIMINATION.md`.  The official candidate inventory for all four
+levels is recorded in `P7_STEP_IV_CANDIDATE_INVENTORY.md`.
 
 After proving Lemmas A and B:
 
     absolute irreducibility at p=7: complete;
     modularity and conductor framework: inherited from the source papers;
-    level (2,2) newform elimination: complete only in the special 7-adic disks; generic unit disk open;
+    level (2,2) newform elimination: complete, subject to the cited standard local inputs;
     levels (3,2), (2,3), (3,3): still open;
     full nonexistence theorem for A^3+B^5=C^7: not yet established.
 

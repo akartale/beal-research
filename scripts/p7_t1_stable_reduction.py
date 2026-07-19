@@ -83,9 +83,18 @@ def main() -> None:
     print("squarefree quotient f/g^2", q, "remainder", r, "degree", len(q) - 1)
     print("g roots over F7", [a for a in range(P) if eval_poly(g, a) == 0])
     print("normalization point count", count_hyperelliptic_odd(q))
-    # For an elliptic normalization, a_7=8-#E(F_7); ordinary iff a_7 not divisible by 7.
     n = count_hyperelliptic_odd(q)
     print("normalization trace", P + 1 - n)
+
+    # For F_t(x)=45x^6-108x^5+90t*x^3+9t^2, the first t-derivative
+    # at t=1 is 90x^3+18, i.e. 6x^3+4 modulo 7.  Its remainder modulo
+    # the node polynomial g detects whether t-1 smooths each node to first
+    # order.  A nonzero constant in F_49=F_7[x]/(g) means both conjugate
+    # nodes have nonzero first-order smoothing parameter.
+    dt = [4, 0, 0, 6]
+    _, dt_rem = divmod_poly(dt, g)
+    print("dF/dt mod g", dt_rem)
+    print("simple smoothing at both nodes", bool(dt_rem))
 
 
 if __name__ == "__main__":

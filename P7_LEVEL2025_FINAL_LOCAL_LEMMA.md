@@ -2,15 +2,20 @@
 
 ## Statement
 
-Let `q` be the unique prime of `F=Q(sqrt(5))` above 7.  In either special
-7-adic disk arising from a primitive solution, the residual Frey
+Let `q` be the unique prime of `F=Q(sqrt(5))` above 7.  For every 7-adic
+residue branch arising from a primitive solution, the residual Frey
 representation is not isomorphic to any of
 
     2.2.5.1-2025.1-e,
     2.2.5.1-2025.1-h,
     2.2.5.1-2025.1-l.
 
-Consequently these three forms are eliminated in the two special disks.  This statement does not by itself treat the generic unit disk `t in Z_7^*`.
+The branches are exhaustive: `t=0`, `t=infinity`, `t=1`, and the smooth unit
+classes `t mod 7 in {2,3,4,5,6}`.  Form `e` in the `t=0` branch is eliminated
+by the reproducible auxiliary-prime calculation in
+`scripts/p7_form_e_exact_branches.py`; all remaining comparisons are local at
+7 and are recorded below.  Consequently level `(2,2)`, norm 2025, is locally
+eliminated.
 
 ## 1. Finite-flat comparison
 
@@ -27,26 +32,32 @@ isomorphic.
 
 ## 2. Elimination of e in the infinity disk
 
-In the infinity disk the normalized Frey curve has Cartier--Manin matrix zero.
-Its special-fibre Jacobian therefore has p-rank zero and a-number two.  Its
-finite-flat 7-torsion has no nonzero etale quotient.
+The earlier split-CM ordinarity argument is invalid and is not used.  The
+correct invariant is
 
-The form `e` has CM by
+    tau = Tr(Phi_7^2/7) mod 7.
 
-    K_e=F(sqrt(-3)),
+The infinity special fibre has zero Hasse--Witt matrix.  In a Hodge-adapted
+block matrix this makes
 
-and `q` splits in `K_e/F`.  Locally,
+    tau = Tr(B^(sigma)C + C^(sigma)B) mod 7,
 
-    K_e tensor_F F_q = F_q x F_q,
+so `tau` is intrinsic to the torsion Fontaine--Laffaille module.  The exact
+modulo-49 computation gives
 
-so the CM representation is a sum of two crystalline characters.  Their
-labelled Hodge--Tate weights are 0 and 1.  A crystalline character of weight
-zero over an unramified p-adic field is unramified.  Hence one summand is an
-unramified unit-root line and the other is its cyclotomic partner.  The
-finite-flat model is ordinary and has a nonzero etale quotient.
+    tau(Frey) in {4,5}
 
-Thus the finite-flat models of the Frey representation and `e` cannot be
-isomorphic.  This eliminates `e`.
+for every unit `v mod 49` and every `a>=1`.  For form `e`,
+
+    a_q(e)=-14,
+
+and restriction of scalars gives
+
+    tau(e)=Tr_{F_q/Q_7}(-14)/7=-28/7=3 mod 7.
+
+Thus the finite-flat modules cannot be isomorphic.  See
+`P7_FORM_E_NORMALIZED_QFROBENIUS.md` and
+`P7_FORM_E_QFROBENIUS_INTRINSICNESS.md`.
 
 ## 3. A local unramified-twist lemma
 
@@ -112,14 +123,63 @@ isomorphic to the model attached to `h` or `l`.
 
 Thus `h` and `l` are eliminated.
 
-## 5. Conclusion and dependencies
+## 5. Smooth unit classes
 
-The complete standard sieve at level 2025 leaves exactly `e,h,l`; the arguments above eliminate them whenever the solution parameter lies in the special disks `t=0` or `t=infinity`.  A separate residual test is still required for the generic unit disk.  The result depends only on:
+For `t mod 7 in {2,3,4,5,6}`, the reduced genus-2 curve is smooth and its
+Hasse--Witt matrix is invertible.  Hence the Frey Jacobian is ordinary.  The
+three candidate forms are nonordinary at `q`: `e` has polynomial `(T+7)^2`
+and `h,l` have polynomial `T^2+49`.  Therefore none can occur in a smooth unit
+class.
 
-1. the normalized special-disk models and their Cartier--Manin matrices;
+## 6. The t=1 branch
+
+At `t=1`, the reduced sextic factors as
+
+    (x^2+6x+6)^2 (5x^2+5x+1).
+
+The normalization has genus zero and the two conjugate nodes are smoothed to
+first order by `t-1`; hence the stable Jacobian is totally toric of rank two.
+Raynaud uniformization supplies a nonzero cyclotomic submodule in the residual
+Tate module.  None of `e,h,l` has a multiplicative subquotient, since all three
+are nonordinary.  Low-ramification full faithfulness gives the contradiction.
+See `P7_T1_TORIC_ELIMINATION.md`.
+
+## 7. Elimination of h and l in the infinity disk
+
+For the normalized infinity sextic, PARI returns the five-dimensional
+even-degree Monsky--Washnitzer space with ordered basis
+
+    e_i=X^(i-1)dX/(2Y), 1<=i<=5.
+
+At the two points at infinity, only `e_3` has nonzero residue.  Hence the proper
+genus-2 crystalline lattice is the Frobenius-stable kernel
+
+    D=<e_1,e_2,e_4,e_5>.
+
+Its Hodge filtration is `<e_1,e_2>`.  Dividing the lower-left Frobenius block
+by 7 and reducing modulo 7 gives rank 2 for all six infinity unit classes.  The
+explicit CM model for `h,l` has rank 1, and the local unramified-twist lemma
+preserves this rank.  Low-ramification finite-Honda full faithfulness therefore
+rules out both forms.  The complete residue calculation and matrices are in
+`P7_INFINITY_HL_DIVIDED_FROBENIUS.md` and
+`scripts/p7_infinity_quotient_divided_rank.py`.
+
+## 8. Conclusion and verified dependencies
+
+The exact auxiliary-prime sieve eliminates `e` at `t=0`, and Sections 2--7
+eliminate all remaining candidate/branch pairs.  Thus level `(2,2)`, norm
+2025, is locally closed.
+
+The proof depends on:
+
+The verified eliminations depend on:
+
+1. the normalized branch models and their Hasse--Witt/stable-reduction data;
 2. Conrad Lemma 4.1 and Theorem 3.6 in the range `e=1<6`;
-3. the elementary rank-one crystalline fact: weight zero implies unramified;
-4. the audited PARI/Kedlaya Frobenius matrices modulo 49.
+3. the local unramified-twist lemma for `h,l` in the `t=0` comparison;
+4. the audited PARI/Kedlaya Frobenius matrices modulo 49;
+5. the standard toric part of Raynaud uniformization.
 
-It does not depend on Sage, Magma, AFUCH, a literal global identification of
-`Jac(y^2=x^5-1)` with `h/l`, or a global finite-order twist assertion.
+They do not depend on Sage, Magma, AFUCH, a literal global identification of
+`Jac(y^2=x^5-1)` with `h/l`, or the invalid split-CM ordinarity claim for `e`.
+This lemma closes only level 2025; the other Step-IV levels remain open.
