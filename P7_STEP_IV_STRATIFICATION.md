@@ -61,20 +61,25 @@ The cheapest refinement is therefore:
 
 ### C. The seven CM forms at level (2,3)
 
-All seven share one CM field.  A single local splitting/Honda computation can
-potentially eliminate all seven simultaneously, up to unramified twists.
+All seven share the CM field `F(sqrt(-3))`, but the prime `q|7` splits in this
+extension because the residue field is `F_49` and `-3` is a square there.
+Therefore their local type is split ordinary.  The inert-CM Honda-rank argument
+used at level `2025` does not apply.  Nonordinary and toric Frey branches can be
+removed uniformly; ordinary branches require the exact unramified twist or
+Frobenius data for the seven forms.  See `full/LEVEL_23_CM_LOCAL_AUDIT.md`.
 
 ### D. The two ghost forms at level (3,3)
 
-The source paper proves a local-type mismatch at 3 when `3` does not divide the
-relevant solution coordinate.  The remaining divisibility subcase should be
-isolated before any new computation.
+Both ghost forms are now uniformly excluded at the fixed prime `3`: their Swan
+conductor is `6`, while the GA branches have Swan conductor `0` or `2`.
 
 ## Current Step-IV status
 
 - level `(2,2)`: closed;
-- level `(3,2)`: exact p=7 set split into 2 CM plus 7 non-CM candidates;
-- level `(2,3)`: exact unconditional CM set known, but additional individual
-  p=7 exceptions are not yet enumerated;
-- level `(3,3)`: two unconditional ghost forms known, but additional individual
-  p=7 exceptions are not yet enumerated.
+- level `(3,2)`: the zero-bound set is exactly `{65,78}`; the five additional
+  PDF-classified CM forms have nonzero finite bounds and are eliminated at `p=7`;
+  seven further non-CM forms remain as `p=7`-specific exceptions;
+- level `(2,3)`: the seven zero-bound CM forms are split ordinary at `q|7`;
+  individual `flag=true` output and exact local twist data are still required;
+- level `(3,3)`: the two zero-bound ghost forms are uniformly closed at `3`;
+  additional `p=7`-specific exceptions have not yet been enumerated.

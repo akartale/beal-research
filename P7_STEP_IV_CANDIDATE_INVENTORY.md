@@ -41,13 +41,19 @@ Level:
 
     3^3 * (sqrt(5))^2,
 
-with 111 newform orbits.  The official run used `flag=true`, so the individual
-p=7 survivors are visible.  They are exactly
+with 111 newform orbits.  The detailed transcript is preserved in Git commit
+
+    77951edd8576e450c7cf3cec78404b5521edb193
+
+of `lucasvillagra/GFE-5p3`.  That version ran `(3,2)` with `flag=true`, so the
+individual p=7 survivors are visible.  They are exactly
 
     C_32={21,22,26,33,61,65,78,92,98}.
 
 Among these, 65 and 78 are unconditional Bad forms for the standard sieve;
-the other seven have individual Mazur bounds divisible by 7.
+the other seven have individual Mazur bounds divisible by 7.  The current
+shorter transcript suppresses these per-orbit lines, so the historical commit
+is the primary reproducible provenance for this exact set.
 
 ## Level (2,3)
 
@@ -67,7 +73,10 @@ certified candidate containment is
     B_23 subset C_23 subset {1,...,35}.
 
 An individual rerun or an open reconstruction of the Hecke eigenvalues is
-required to determine C_23 exactly.
+required to determine C_23 exactly.  A complete audit of every historical
+version of `Outputs/TheoremA.txt`, the deleted `TheoremA.m`/
+`Elimination-Step.m`, and `Codes/GPcode.gp` found no preserved per-orbit output
+or hard-coded Hecke eigenvalues for this level.
 
 ## Level (3,3)
 
@@ -85,13 +94,17 @@ p=7 set.  The certified containment is
 
     B_33 subset C_33 subset {1,...,112}.
 
+The full Git history contains no deleted detailed `(3,3)` transcript and no
+stored Hecke eigenvalue table from which the individual bounds can be
+recovered directly.
+
 ## Highest-return next computation
 
 The cheapest useful next step is not another geometric local calculation.  It
 is to reconstruct the individual p=7 Mazur bounds for levels (2,3) and (3,3):
 
-1. obtain Hecke eigenvalues for the 35+112 newform orbits from LMFDB or another
-   open Hilbert modular form database;
+1. obtain Hecke eigenvalues for the 35+112 newform orbits from an open Hilbert
+   modular form source or compute the relevant Brandt modules;
 2. reuse the already open PARI-generated candidate polynomials in
    `upstream/GFE-5p3/Outputs/Data.txt`;
 3. implement `NewformBound`, `NewformBoundOverF`, `Eliminate_FormLL`, and

@@ -73,12 +73,15 @@ These three forms are CM forms in the source paper.
 
 ### Level (3,2): 3^3 (sqrt(5))^2
 
-The detailed official output gives the exact p=7 candidate set
+The detailed official output in Git commit
+`77951edd8576e450c7cf3cec78404b5521edb193` gives the exact p=7 candidate set
 
     {21,22,26,33,61,65,78,92,98}.
 
 Here 65 and 78 are unconditionally Bad for the standard auxiliary-prime sieve;
-the other seven retain 7 in their individual bounds.
+the other seven retain 7 in their individual bounds.  This historical commit
+is now recorded as the primary provenance because the current transcript no
+longer prints the individual lines.
 
 ### Levels (2,3) and (3,3)
 
@@ -91,10 +94,13 @@ The official computation repository has now been imported at
 The published calls use `flag=false`; their aggregate exceptional-prime lists
 contain 7, so the complete individual p=7 candidate sets outside these Bad
 sets still cannot be recovered from the transcript alone.  The correct level
-norms are 10125 and 91125 because the inert ideal `(3)` has norm 9.  Direct
-LMFDB pages exist at norm 10125, but the public search/API does not currently
-return the complete orbit list, so a dedicated label/download reconstruction
-is required.  See `P7_STEP_IV_CANDIDATE_INVENTORY.md`.
+norms are 10125 and 91125 because the inert ideal `(3)` has norm 9.  The ideal of norm 10125 is unique, hence its natural LMFDB ideal label is
+`10125.1`; however the corresponding form endpoints return no records.  This
+indicates missing database coverage rather than an ideal-label ambiguity.
+The historical Voight static-data links for discriminant 5 are presently stale
+(HTTP 404), and a full audit of the source repository history found no deleted
+per-orbit `(2,3)` or `(3,3)` output.  Thus a new open computation or an external
+Hecke-data export is genuinely required.  See `P7_STEP_IV_CANDIDATE_INVENTORY.md`.
 
 ## Translation of the paper's auxiliary local hypotheses
 

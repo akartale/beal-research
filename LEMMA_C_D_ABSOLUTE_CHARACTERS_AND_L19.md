@@ -29,18 +29,30 @@ No field-of-definition assumption is required. Since ord_180(7)=12, all values
 of all 360 characters lie in F_{7^12}; this is only a convenient common field
 for the computation, not an extra hypothesis.
 
-The prime ideals above 19 both have ray-class coordinates
+The two prime ideals above 19 both have ray-class coordinates
 
     [141,1]
 
-with respect to the chosen generators.
+with respect to the chosen generators.  This has been checked independently
+for both prime ideals, not inferred from one chosen factor.  The reproducible
+probe is
+
+    research/beal/scripts/probe_l19_both_raycoords.gp
+
+and prints
+
+    number_of_primes=2
+    i=1 norm=19 coords=[141,1]
+    i=2 norm=19 coords=[141,1].
 
 ## Lemma D — completeness of the paired trace set at l=19
 
 For every pair (A,B) in (F_19^*)^2:
 
 1. compute n=A^3+B^5;
-2. require n != 0 and require that n is a seventh power in F_19^*;
+2. require n != 0.  Since gcd(7,18)=1, the seventh-power map on
+   F_19^* is an automorphism, so every nonzero n is automatically a seventh
+   power;
 3. form the reduction of the plus Frey curve
 
        y^2 = 5x^6 - 12 A x^5 - 10 B^5 x^3 + B^10;
@@ -55,7 +67,19 @@ For every pair (A,B) in (F_19^*)^2:
 
        T^2 + c1 T + (c2 - 2*19) mod 7.
 
-The resulting set contains 15 unordered trace pairs.
+The resulting set contains exactly the following 15 reduced RM trace
+polynomials, encoded by their coefficient pairs `(s,p)` for
+`T^2-sT+p`:
+
+    [[0,1],[0,4],[1,4],[1,6],[2,3],
+     [3,1],[3,4],[3,5],[3,6],[4,1],
+     [4,6],[5,2],[5,3],[5,5],[6,3]].
+
+This list is reproduced directly by
+
+    research/beal/scripts/frey_pairs_l19.gp
+
+and is the same list consumed by the exhaustive character script.
 
 For a reducible ray character chi, and for the two primes q1,q2 above 19, the
 predicted unordered pair is

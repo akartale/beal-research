@@ -1,6 +1,7 @@
 toolchain/
 vendor/
 upstream/
+full/
 __pycache__/
 *.pyc
 *.pyo

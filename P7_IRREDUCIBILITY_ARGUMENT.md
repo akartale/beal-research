@@ -2,14 +2,20 @@
 
 ## Status
 
-The computational completeness issues for the ordinary branch are now resolved
-over the full algebraic closure. Two mathematical inputs remain to be proved as
-standalone local lemmas:
+The computational completeness issues for the ordinary branch are resolved
+over the full algebraic closure.  The conductor comparison required in Lemma B
+is now proved directly in `LEMMA_A_B_LOCAL_PROOF_DRAFT.md`; subject to the
+source conductor exponents and finite-flatness at `p7`, Lemma B is complete.
 
-- Lemma A: exact finite-flat/Raynaud inertia types at p7;
-- Lemma B: conductor bound for each diagonal character.
+Lemma A is supplied by Raynaud, Corollaire 3.4.4, together with Conrad,
+Lemma 4.1.  Raynaud bounds every tame digit by the local ramification index
+`e=1`.  A diagonal constituent is a character of the full local decomposition
+group, so Frobenius conjugacy over the residue field F_49 forces those digits
+to be periodic with period two.  Hence its tame exponent is `a0+7*a1` with
+`a0,a1 in {0,1}`.  This remains valid when the stable line is defined only
+over an extension of F_49.
 
-Lemmas C and D are now complete and reproducible; see
+Lemmas C and D are complete and reproducible; see
 `LEMMA_C_D_ABSOLUTE_CHARACTERS_AND_L19.md`.
 
 ## Setup
@@ -35,8 +41,9 @@ Up to exchange, the two branches are:
 - ordinary type {0,8};
 - niveau-two type {1,7}.
 
-This statement still requires a precise citation/proof for this Frey
-specialization.
+The precise proof and citations are recorded in
+`LEMMA_A_B_LOCAL_PROOF_DRAFT.md`; no additional labelled-weight hypothesis is
+used.
 
 ## Niveau-two branch
 
@@ -54,11 +61,23 @@ and hence
 
     |ker(Cl_m1 -> Cl_m0)| = 24.
 
-The local tame unit quotient is `F_49^*`, of order 48, while the new global ray kernel has order 24. This order comparison strongly suggests that the global quotient kills the unique subgroup of order 2 and hence admits only even `omega_2` exponents. However, the order computation alone does not identify the kernel map.
+The exact ray-class sequence for increasing the modulus from `m0` to
+`m1=m0*p7` gives a surjection from the local tame unit group
 
-To make the exclusion rigorous, one must explicitly identify the image of the local tame unit group in `Cl_m1/Cl_m0` and prove that every global ray character restricts with even `omega_2` exponent. Until that map is written down, the exclusion of exponents 1 and 7 remains conditional.
+    F_49^* = (O_K/p7)^*
 
-This conclusion is also conditional on Lemma B supplying the stated global conductor support.
+to the kernel of `Cl_m1 -> Cl_m0`, with kernel equal to the image of the global
+units satisfying the `m0` ray conditions.  Since the source has order 48 and
+the ray kernel has order 24, that unit image has order 2.  The cyclic group
+`F_49^*` has a unique subgroup of order 2, namely `{+1,-1}`.  Therefore every
+global ray character of modulus dividing `m1` is trivial on `-1` locally and
+its restriction to tame inertia is `omega_2^n` with `n` even.
+
+The niveau-two exponents supplied by Lemma A are `n=1` and `n=7`, both odd.
+Hence the niveau-two reducible branch is impossible.  This deduction is
+conditional only on the conductor support in Lemma B and the exact inertia
+classification in Lemma A; the previously missing local-to-global ray-map
+identification is now supplied by the exact sequence.
 
 ## Ordinary branch — complete over Fbar_7
 
@@ -89,13 +108,19 @@ Primary script:
 
     research/beal/scripts/eliminate_all_c0_l19_pairs.gp
 
-## Conditional conclusion
+## Conclusion
 
-Once Lemma A and Lemma B are proved with the exact hypotheses above, both
-possible reducible inertia branches are impossible, and therefore
+The ordinary branch is eliminated by Lemmas C and D, and the niveau-two branch
+is eliminated by the exact ray-class sequence above.  Lemma B's semisimplified
+conductor comparison is proved in `LEMMA_A_B_LOCAL_PROOF_DRAFT.md`.  Lemma A
+follows from Raynaud Corollaire 3.4.4 and Conrad Lemma 4.1, using the source
+paper's finite-flatness statement and the residual F_49 coefficient action.
+Therefore
 
     rho_bar_7 is absolutely irreducible.
 
-This document does not yet claim an unconditional proof: the remaining gap is
-now localized entirely in Lemmas A and B, not in character enumeration or the
-l=19 trace computation.
+This conclusion is conditional only in the ordinary mathematical sense that
+the quoted source theorem `thm:mot-+-prop` and its conductor table must apply to
+the Frey representation under the recorded variable translation; there is no
+remaining local group-scheme or ray-character gap in the irreducibility
+argument.

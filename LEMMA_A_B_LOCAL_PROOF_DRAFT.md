@@ -27,15 +27,43 @@ Here `finite at p7` is the finite-flat condition used in level lowering.
 
 Because 7 is inert in K, the local extension K_p7/Q_7 is unramified of residue
 degree 2 and absolute ramification index e=1. Let omega_2 be a fundamental
-character of niveau two. Raynaud/Fontaine--Laffaille gives the following for
-every one-dimensional Jordan--Hoelder constituent of the restriction to tame
-inertia of a finite-flat representation with weights in [0,1]:
+character of niveau two.
+
+Conrad, Lemma 4.1, says that for `e<p-1` the finite-flat category is
+abelian and the generic-fibre functor is fully faithful and exact.  Hence a
+Jordan--Hoelder factor of the reducible generic fibre is the generic fibre of
+a finite-flat Jordan--Hoelder quotient after restriction of scalars to F_7.
+
+Apply Raynaud, `Schemas en groupes de type (p,...,p)`, Corollaire 3.4.4, to
+such a simple quotient.  If its endomorphism field is `F=F_(7^r)`, its tame
+character has the form
+
+    psi_0^u0 psi_1^u1 ... psi_(r-1)^u_(r-1),
+    uj in {0,1},
+
+because the absolute ramification index is `e=1`.  The underlying residual RM
+representation has F_7-dimension four, so `r<=4`.
+
+There is one further constraint which is essential here.  Each diagonal
+constituent is a one-dimensional character of the full local decomposition
+group, not merely of inertia.  Arithmetic Frobenius acts on tame inertia by
+raising to the residue-field cardinality `q=49`; scalar-valued characters are
+unchanged by conjugation.  Therefore
+
+    theta(tau^49)=theta(tau),
+
+so the Raynaud digit sequence is periodic with period two.  For `r=1,2,3,4`
+this forces the character to descend to niveau dividing two.  Writing
+`omega_2` for a fundamental character of niveau two gives
 
     theta = omega_2^(a0 + 7 a1),   a0,a1 in {0,1}.
 
 Thus the only possible exponents are
 
     0, 1, 7, 8.
+
+This argument also covers absolutely reducible lines defined only over an
+extension of F_49; no unjustified F_49-rationality of the stable line is used.
 
 Since det(rho_bar)|I = epsilon_bar_7|I = omega_2^8, the two exponents are
 complementary to 8 modulo 48. Up to exchange, the only possible multisets are
@@ -44,12 +72,17 @@ complementary to 8 modulo 48. Up to exchange, the only possible multisets are
 
 The first is the ordinary branch; the second is the niveau-two branch.
 
-### Citation requirement
+### Exact citation and hypotheses
 
-For the final paper, cite either Raynaud's Corollaire 3.4.4 in the semistable
-finite-flat formulation or a Fontaine--Laffaille/Caruso--Savitt theorem for an
-absolutely unramified local field and Hodge--Tate interval of length <=p-2.
-The hypotheses here are especially small: e=1, f=2, weights {0,1}, p=7.
+The required inertia statement is Raynaud, *Schemas en groupes de type
+(p,...,p)*, Bulletin de la Societe Mathematique de France 102 (1974),
+Corollaire 3.4.4, combined with Conrad, *Finite group schemes over bases with
+low ramification*, Lemma 4.1.  Raynaud's result applies because the local
+absolute ramification index is `e=1`; Conrad supplies exactness of passage
+between finite-flat models and their generic fibres.  Frobenius conjugacy over
+the residue field F_49 then forces the Raynaud tame digits to have period two.
+This proves Lemma A without invoking a separate Fontaine--Laffaille
+labelled-weight theorem or assuming that the stable line is F_49-rational.
 
 ## Lemma B — conductor of diagonal characters
 
@@ -74,11 +107,24 @@ Artin conductors are additive on direct sums:
 
     a_q(rho_bar^ss)=a_q(chi_1)+a_q(chi_2).
 
-To use the published conductor bound for `rho_bar`, one also needs the standard inequality
+The required comparison with the possibly non-semisimple representation is
 
-    a_q(rho_bar^ss) <= a_q(rho_bar),
+    a_q(rho_bar^ss) <= a_q(rho_bar).
 
-or an equivalent local argument at the primes above 3 and 5. This step must be cited or proved in the final version, especially in the presence of wild inertia. Once this inequality is supplied, each nonnegative summand satisfies
+Here is a direct proof.  Let `G_i` be the lower ramification groups of the
+finite inertia quotient through which `rho_bar` factors.  For every `i`, the
+invariant functor is left exact.  Applying it along a Jordan--Hoelder
+filtration of `rho_bar` gives
+
+    dim((rho_bar^ss)^(G_i)) >= dim(rho_bar^(G_i)).
+
+Hence
+
+    codim((rho_bar^ss)^(G_i)) <= codim(rho_bar^(G_i)).
+
+The Artin conductor is a positive weighted sum of these codimensions, so the
+inequality follows term by term, including the wild terms.  Consequently each
+nonnegative diagonal summand satisfies
 
     a_(3)(chi_i) <= 3,
     a_(sqrt(5))(chi_i) <= 3.
@@ -110,14 +156,21 @@ unjustified parity restriction.
 
 ## Conditional result and remaining proof obligations
 
-Lemma A becomes complete after inserting an exact finite-flat/Raynaud or Fontaine--Laffaille theorem and checking its hypotheses for this Frey representation.
+The conductor comparison needed in Lemma B is proved above directly from the
+ramification filtration.  Subject to the source conductor exponents and the
+finite-flat statement at `p7`, Lemma B is therefore complete.
 
-Lemma B additionally requires a cited proof of
+Lemma A is proved by Raynaud Corollaire 3.4.4 plus Conrad Lemma 4.1, as written
+above.  Lemma B is proved subject only to the source paper's stated
+finite-flatness and conductor exponents.
 
-    a_q(rho_bar^ss) <= a_q(rho_bar)
+The niveau-two local-to-global step is supplied in
+`P7_IRREDUCIBILITY_ARGUMENT.md` by the exact ray-class sequence.  The local
+group F_49^* of order 48 maps onto the ray kernel of order 24 with kernel
+`{+1,-1}`, so every globalized tame exponent is even; this excludes exponents
+1 and 7.
 
-at the primes above 3 and 5, or a direct local conductor calculation there.
-
-The niveau-two branch also requires a written local-to-global identification of the order-24 ray kernel with the relevant quotient of the local tame unit group, sufficient to prove that only even `omega_2` exponents globalize.
-
-After these three obligations are discharged, the argument combines with `LEMMA_C_D_ABSOLUTE_CHARACTERS_AND_L19.md` to prove absolute irreducibility of `rho_bar` at `p=7`. This draft does not yet claim that unconditional conclusion.
+Combining Lemmas A and B with `LEMMA_C_D_ABSOLUTE_CHARACTERS_AND_L19.md`
+therefore proves absolute irreducibility of `rho_bar` at `p=7`, conditional
+only on the source theorem `thm:mot-+-prop` and its quoted conductor table being
+applied with the stated variable translation.
