@@ -1,4 +1,4 @@
-# Lemmas C and D: absolute characters and the paired l=19 sieve
+# Lemma C and the good-reduction part of Lemma D at l=19
 
 ## Lemma C — completeness over the algebraic closure
 
@@ -45,7 +45,7 @@ and prints
     i=1 norm=19 coords=[141,1]
     i=2 norm=19 coords=[141,1].
 
-## Lemma D — completeness of the paired trace set at l=19
+## Good-reduction sublemma for Lemma D at l=19
 
 For every pair (A,B) in (F_19^*)^2:
 
@@ -97,7 +97,13 @@ returns
     survivors_at_l19_pairwise=0
     survivors=[]
 
-Therefore no absolutely reducible ordinary character survives.
+Therefore no absolutely reducible ordinary character survives **within the good-reduction branch** `19 does not divide ABC`.
+
+This is not the complete Lemma D. At `19`, the degenerations `t=0`, `t=1`, and `t=infinity` must also be admitted. The full four-branch sieve, intersected over all available split auxiliary primes, leaves exactly the four quadratic characters
+
+    (0,0), (0,1), (90,0), (90,1).
+
+They are not eliminated by adding further auxiliary primes of the same four-branch type. Their subsequent proposed elimination uses a split-toric local condition at `p7` and a conductor contradiction at `3` or `sqrt(5)`; those are separate theorem-level inputs and are audited in `MANUSCRIPT_357_FROM_SCRATCH.md` and `P7_FULL_PROOF_AUDIT.md`.
 
 ## Reproducibility
 
@@ -113,11 +119,9 @@ Supporting computations:
 
 ## Remaining hypotheses outside Lemmas C and D
 
-This calculation proves the complete character enumeration and complete paired
-l=19 elimination, conditional only on the inputs supplied by the other local
-lemmas:
+This calculation proves the complete ordinary character enumeration and the complete paired `l=19` elimination in the generic good-reduction branch, conditional on:
 
-- Lemma A: exact finite-flat inertia types at p7;
+- Lemma A: exact finite-flat inertia types at `p7`;
 - Lemma B: conductor bound for the diagonal characters.
 
-It does not assume that the diagonal characters are F_49-valued.
+It does **not** eliminate the three degeneration branches at `19`, and therefore does not by itself prove Lemma D or absolute irreducibility. It does not assume that the diagonal characters are `F_49`-valued.

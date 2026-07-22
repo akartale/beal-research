@@ -29,13 +29,11 @@ Because 7 is inert in K, the local extension K_p7/Q_7 is unramified of residue
 degree 2 and absolute ramification index e=1. Let omega_2 be a fundamental
 character of niveau two.
 
-Conrad, Lemma 4.1, says that for `e<p-1` the finite-flat category is
-abelian and the generic-fibre functor is fully faithful and exact.  Hence a
-Jordan--Hoelder factor of the reducible generic fibre is the generic fibre of
-a finite-flat Jordan--Hoelder quotient after restriction of scalars to F_7.
+There is no need to lift a chosen `Fbar_7`-stable line as a separate finite-flat subgroup scheme. Regard the residual representation as a finite `F_7`-module and choose a simple Jordan--Hoelder quotient of its generic finite group scheme. Absolute reducibility guarantees that, after extending coefficients, its characters are among the diagonal constituents; a simple factor over `F_7` may have dimension greater than one and acquires a one-dimensional structure over its finite endomorphism field.
 
-Apply Raynaud, `Schemas en groupes de type (p,...,p)`, Corollaire 3.4.4, to
-such a simple quotient.  If its endomorphism field is `F=F_(7^r)`, its tame
+Raynaud, `Schemas en groupes de type (p,...,p)`, Corollaire 3.4.4, applies directly to this situation: if a finite commutative `K`-group scheme killed by a power of `p` admits a finite-flat prolongation, then every generic-fibre Jordan--Hoelder quotient is an `F`-vector scheme for a suitable finite field `F`, and its tame character has Raynaud digits bounded by `e`. Thus the categorical generic-fibre/Jordan--Hoelder passage is part of the cited corollary itself.
+
+Conrad, Lemma 4.1, independently confirms that when `e<p-1` the finite-flat category is abelian and the generic-fibre functor is fully faithful and exact. It is useful as a consistency check, but it is not necessary to assume that the chosen absolutely reducible line itself descends to the original coefficient field.  If its endomorphism field is `F=F_(7^r)`, its tame
 character has the form
 
     psi_0^u0 psi_1^u1 ... psi_(r-1)^u_(r-1),
@@ -76,10 +74,7 @@ The first is the ordinary branch; the second is the niveau-two branch.
 
 The required inertia statement is Raynaud, *Schemas en groupes de type
 (p,...,p)*, Bulletin de la Societe Mathematique de France 102 (1974),
-Corollaire 3.4.4, combined with Conrad, *Finite group schemes over bases with
-low ramification*, Lemma 4.1.  Raynaud's result applies because the local
-absolute ramification index is `e=1`; Conrad supplies exactness of passage
-between finite-flat models and their generic fibres.  Frobenius conjugacy over
+Corollaire 3.4.4. That corollary explicitly treats a Jordan--Hoelder quotient of a generic finite group scheme which admits a finite-flat prolongation, so it supplies the previously questioned categorical passage directly. Raynaud's result applies because the local absolute ramification index is `e=1`. Conrad, *Finite group schemes over bases with low ramification*, Lemma 4.1, additionally states that for `e<p-1` the finite-flat category is abelian and generic fibre is fully faithful and exact; this corroborates, rather than replaces, the direct Raynaud application.  Frobenius conjugacy over
 the residue field F_49 then forces the Raynaud tame digits to have period two.
 This proves Lemma A without invoking a separate Fontaine--Laffaille
 labelled-weight theorem or assuming that the stable line is F_49-rational.
@@ -170,7 +165,6 @@ group F_49^* of order 48 maps onto the ray kernel of order 24 with kernel
 `{+1,-1}`, so every globalized tame exponent is even; this excludes exponents
 1 and 7.
 
-Combining Lemmas A and B with `LEMMA_C_D_ABSOLUTE_CHARACTERS_AND_L19.md`
-therefore proves absolute irreducibility of `rho_bar` at `p=7`, conditional
-only on the source theorem `thm:mot-+-prop` and its quoted conductor table being
-applied with the stated variable translation.
+Lemma A's finite-flat Jordan--Hoelder passage is closed by the exact statement of Raynaud Corollaire 3.4.4. The branchwise source conductor table has now been verified under `(a,b,c)=(B,-C,A)` in `PRIMITIVE_VALUATION_CONDUCTOR_TABLE.md`; therefore Lemma B is also closed in the current audit.
+
+`LEMMA_C_D_ABSOLUTE_CHARACTERS_AND_L19.md` proves only the good-reduction part of Lemma D at `19`; it must not be cited as a complete proof of the ordinary branch. The full four-branch sieve and the separately audited toric and conductor arguments reduce Lemma D to the single quadratic survivor `(90,0)`. Its noncircular elimination remains open. Accordingly, absolute irreducibility is not claimed here as theorem-level complete.

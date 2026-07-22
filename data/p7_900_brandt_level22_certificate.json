@@ -1,0 +1,68 @@
+{
+  "level": "(3)^2*(sqrt(5))^2",
+  "exponents": [
+    2,
+    2
+  ],
+  "dimension": 46,
+  "targets": {
+    "T11a": 2,
+    "T11b": 2,
+    "T19a": 1,
+    "T19b": 1,
+    "T29a": 2,
+    "T29b": 2
+  },
+  "rank_chain": [
+    {
+      "after": "T11a",
+      "rank": 40,
+      "dimension": 6
+    },
+    {
+      "after": "T11b",
+      "rank": 42,
+      "dimension": 4
+    },
+    {
+      "after": "T19a",
+      "rank": 46,
+      "dimension": 0
+    },
+    {
+      "after": "T19b",
+      "rank": 46,
+      "dimension": 0
+    },
+    {
+      "after": "T29a",
+      "rank": 46,
+      "dimension": 0
+    },
+    {
+      "after": "T29b",
+      "rank": 46,
+      "dimension": 0
+    }
+  ],
+  "survivors_dimension": 0,
+  "operator_nnz": {
+    "T11a": 490,
+    "T11b": 490,
+    "T19a": 699,
+    "T19b": 699,
+    "T29a": 1011,
+    "T29b": 1011
+  },
+  "operator_sha256": {
+    "T11a": "41399ff04d99b0c50db3b9b73136327516aebb37c02aded36e2572a804987ce1",
+    "T11b": "5b8b42ce3da0e70c9cb942e7dc35bda103fc08f5efd06821eb8b5e9126e0a497",
+    "T19a": "4617af68eadf8c6423dab79e93eeef46f0314c8083984bd01c0c17752f6afccd",
+    "T19b": "4ad42ba349ea3a2e8f9564eebb092af64ce84e573fbd2a5cac63079e47a3d46e",
+    "T29a": "f6432c46df61131f361f1bf0c91a60e70cd2424acb9ec87306c65d25e1b2683c",
+    "T29b": "972ac56512abd0d90182d3cae29d312040b4f14bb4bc989d1ad3c10999ef8089"
+  },
+  "script_sha256": "ace7ab37dd5c995cd24ee3af37857d8d808b18e9bb4144afc282bbfea7d2eed0",
+  "all_pairwise_commute": true,
+  "row_sum_checks": true
+}

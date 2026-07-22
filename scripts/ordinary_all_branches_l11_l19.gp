@@ -1,0 +1,12 @@
+keypair(r1,r2)={Str(r1+r2,"|",r1*r2)};
+proots(c,a)={my(P);P=(a^0*c[1])*x^2+(a^0*c[2])*x+(a^0*c[3]);polrootsmod(P,a)};
+mkgen(C,a)={my(L=List(),r);for(k=1,#C,r=proots(C[k],a);if(#r==1,listput(L,keypair(r[1],r[1])));if(#r==2,listput(L,keypair(r[1],r[2]))));Set(Vec(L))};
+mkroots(C,a)={my(L=List(),r);for(k=1,#C,r=proots(C[k],a);for(j=1,#r,listput(L,r[j])));Set(Vec(L))};
+branchok(l,co,C1,C0,Coo,d,u,v,a,zz,mone)={my(tr=vector(2),chi,qtr,gen,r0,roo,target,okg,ok0,okoo,ok1);for(j=1,2,chi=zz^((u*co[j][1])%180)*mone^((v*co[j][2])%2);tr[j]=chi+(a^0*(l%7))/chi);gen=mkgen(C1,a);r0=mkroots(C0,a);roo=mkroots(Coo,a);okg=setsearch(gen,keypair(tr[1],tr[2]));qtr=if(d==2,[tr[1]^2-a^0*((2*l)%7),tr[2]^2-a^0*((2*l)%7)],tr);ok0=setsearch(r0,qtr[1])&&setsearch(r0,qtr[2]);okoo=setsearch(roo,qtr[1])&&setsearch(roo,qtr[2]);target=a^0*((l+1)%7);ok1=((tr[1]==target)||(tr[1]==-target))&&((tr[2]==target)||(tr[2]==-target));okg||ok0||okoo||ok1};
+run()={my(T,a,g,zz,mone,C111,C110,C11o,C191,C190,C19o,co11,co19,S=List());T=ffinit(7,12,'t);a=ffgen(T,'a);g=ffprimroot(a);zz=g^((7^12-1)/180);mone=a^0*6;
+C111=[[0,1,5],[0,1,-2],[1,0,-5],[1,4,-1],[1,3,1],[1,-1,-1],[1,1,-11],[1,2,-19],[1,5,-5]];
+C110=[[1,-4,-316],[1,1,-101],[1,-19,-61],[1,-19,59],[1,41,419]];
+C11o=[[0,1,22]];
+C191=[[1,7,1],[1,4,-16],[1,11,29],[1,6,4],[1,-6,-11],[1,7,11],[1,9,9],[1,-4,-1],[1,-2,-4],[1,-1,-1],[1,2,-19],[1,9,19],[1,-5,-25],[1,4,-1],[1,3,1],[0,1,-5],[1,2,-19]];
+C190=[[0,1,38]];C19o=[[0,1,22],[1,-22,-599]];co11=[[77,0],[167,0]];co19=[[141,1],[141,1]];
+for(u=0,179,for(v=0,1,if(branchok(11,co11,C111,C110,C11o,2,u,v,a,zz,mone)&&branchok(19,co19,C191,C190,C19o,2,u,v,a,zz,mone),listput(S,[u,v]))));print("survivors_l11_l19=",#S);print(Vec(S));};run();quit;

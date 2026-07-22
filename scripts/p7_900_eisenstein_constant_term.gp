@@ -1,0 +1,12 @@
+K=bnfinit(y^2-y-1,1);
+z=1/30;
+N3=9; N5=5;
+ct=z*(1-N3)*(1-N5);
+print("zeta_F_minus_1=",z);
+print("local_factor_3=",1-N3);
+print("local_factor_5=",1-N5);
+print("candidate_constant_term=",ct);
+print("numerator=",numerator(ct));
+print("denominator=",denominator(ct));
+print("mod7=",Mod(numerator(ct),7)/Mod(denominator(ct),7));
+quit;

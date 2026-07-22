@@ -11,13 +11,15 @@ from __future__ import annotations
 
 import pickle
 from pathlib import Path
+
+from paths import DATA_DIR
 from random import Random
 
 from hecke_t2_mod7 import global_orbit_and_t2
 from hecke_t11_mod7 import global_orbit_and_hecke, hecke_representatives_11
 
 P = 7
-CACHE = Path("research/beal/data/hecke_mod7_cache.pkl")
+CACHE = DATA_DIR / "hecke_mod7_cache.pkl"
 
 
 def sparse_linear_combination(a, b, scalar):

@@ -1,0 +1,17 @@
+default(parisize,"512M");
+default(parisizemax,"3G");
+out=fileopen("/workspace/research/beal/data/probe_afuchword_35721.txt","w");
+read("/workspace/research/beal/scripts/quaternion_7p3_eichler_lib_hilbert.gp");
+runprobe()={
+  my(P,w1,wid);
+  read("/workspace/research/beal/data/fdom_level35721_tuned.txt");
+  P=PRESENTATION;
+  w1=afuchword(bealX,P[1][1]);
+  wid=afuchword(bealX,[1,0,0,0,0,0,0,0,0,0,0,0]~);
+  filewrite(out,Str("GENERATOR_WORD=",w1));
+  filewrite(out,Str("IDENTITY_WORD=",wid));
+  filewrite(out,Str("GENERATOR_WORD_TYPE=",type(w1)));
+  1
+};
+iferr(runprobe(),err,filewrite(out,Str("ERROR=",err)));
+fileclose(out);quit;

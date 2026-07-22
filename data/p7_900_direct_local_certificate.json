@@ -1,0 +1,916 @@
+{
+  "residual_prime": 7,
+  "character": "(90,0)",
+  "tested_primes": 34,
+  "eliminating_primes": [
+    19,
+    79,
+    89,
+    131
+  ],
+  "rows": [
+    {
+      "q": 11,
+      "signs": [
+        -1,
+        -1
+      ],
+      "targets": [
+        2,
+        2
+      ],
+      "matches": {
+        "generic": [
+          "x + 5",
+          "x - 2"
+        ],
+        "degenerate0": [],
+        "degenerateoo": []
+      },
+      "eliminated": false,
+      "candidate_counts": {
+        "generic": 9,
+        "degenerate0": 5,
+        "degenerateoo": 1
+      }
+    },
+    {
+      "q": 19,
+      "signs": [
+        -1,
+        -1
+      ],
+      "targets": [
+        1,
+        1
+      ],
+      "matches": {
+        "generic": [],
+        "degenerate0": [],
+        "degenerateoo": []
+      },
+      "eliminated": true,
+      "candidate_counts": {
+        "generic": 17,
+        "degenerate0": 1,
+        "degenerateoo": 2
+      }
+    },
+    {
+      "q": 29,
+      "signs": [
+        1,
+        1
+      ],
+      "targets": [
+        2,
+        2
+      ],
+      "matches": {
+        "generic": [
+          "x + 5",
+          "x + 5"
+        ],
+        "degenerate0": [],
+        "degenerateoo": []
+      },
+      "eliminated": false,
+      "candidate_counts": {
+        "generic": 27,
+        "degenerate0": 1,
+        "degenerateoo": 1
+      }
+    },
+    {
+      "q": 31,
+      "signs": [
+        1,
+        1
+      ],
+      "targets": [
+        4,
+        4
+      ],
+      "matches": {
+        "generic": [
+          "x^2 - x - 61"
+        ],
+        "degenerate0": [],
+        "degenerateoo": []
+      },
+      "eliminated": false,
+      "candidate_counts": {
+        "generic": 29,
+        "degenerate0": 5,
+        "degenerateoo": 2
+      }
+    },
+    {
+      "q": 41,
+      "signs": [
+        -1,
+        -1
+      ],
+      "targets": [
+        0,
+        0
+      ],
+      "matches": {
+        "generic": [
+          "x^2 + 7*x - 49",
+          "x + 7"
+        ],
+        "degenerate0": [],
+        "degenerateoo": []
+      },
+      "eliminated": false,
+      "candidate_counts": {
+        "generic": 39,
+        "degenerate0": 5,
+        "degenerateoo": 1
+      }
+    },
+    {
+      "q": 59,
+      "signs": [
+        1,
+        1
+      ],
+      "targets": [
+        4,
+        4
+      ],
+      "matches": {
+        "generic": [
+          "x + 3",
+          "x^2 - x - 61"
+        ],
+        "degenerate0": [],
+        "degenerateoo": []
+      },
+      "eliminated": false,
+      "candidate_counts": {
+        "generic": 57,
+        "degenerate0": 1,
+        "degenerateoo": 1
+      }
+    },
+    {
+      "q": 61,
+      "signs": [
+        1,
+        1
+      ],
+      "targets": [
+        6,
+        6
+      ],
+      "matches": {
+        "generic": [
+          "x + 1"
+        ],
+        "degenerate0": [],
+        "degenerateoo": []
+      },
+      "eliminated": false,
+      "candidate_counts": {
+        "generic": 59,
+        "degenerate0": 5,
+        "degenerateoo": 2
+      }
+    },
+    {
+      "q": 71,
+      "signs": [
+        -1,
+        -1
+      ],
+      "targets": [
+        5,
+        5
+      ],
+      "matches": {
+        "generic": [],
+        "degenerate0": [],
+        "degenerateoo": [
+          "x + 142"
+        ]
+      },
+      "eliminated": false,
+      "candidate_counts": {
+        "generic": 69,
+        "degenerate0": 5,
+        "degenerateoo": 1
+      }
+    },
+    {
+      "q": 79,
+      "signs": [
+        -1,
+        -1
+      ],
+      "targets": [
+        4,
+        4
+      ],
+      "matches": {
+        "generic": [],
+        "degenerate0": [],
+        "degenerateoo": []
+      },
+      "eliminated": true,
+      "candidate_counts": {
+        "generic": 77,
+        "degenerate0": 1,
+        "degenerateoo": 2
+      }
+    },
+    {
+      "q": 89,
+      "signs": [
+        1,
+        1
+      ],
+      "targets": [
+        6,
+        6
+      ],
+      "matches": {
+        "generic": [],
+        "degenerate0": [],
+        "degenerateoo": []
+      },
+      "eliminated": true,
+      "candidate_counts": {
+        "generic": 87,
+        "degenerate0": 1,
+        "degenerateoo": 1
+      }
+    },
+    {
+      "q": 101,
+      "signs": [
+        -1,
+        -1
+      ],
+      "targets": [
+        3,
+        3
+      ],
+      "matches": {
+        "generic": [
+          "x - 3",
+          "x^2 + 8*x - 229"
+        ],
+        "degenerate0": [],
+        "degenerateoo": []
+      },
+      "eliminated": false,
+      "candidate_counts": {
+        "generic": 99,
+        "degenerate0": 5,
+        "degenerateoo": 1
+      }
+    },
+    {
+      "q": 109,
+      "signs": [
+        -1,
+        -1
+      ],
+      "targets": [
+        2,
+        2
+      ],
+      "matches": {
+        "generic": [
+          "x - 9",
+          "x^2 - 25*x + 95",
+          "x - 9"
+        ],
+        "degenerate0": [],
+        "degenerateoo": []
+      },
+      "eliminated": false,
+      "candidate_counts": {
+        "generic": 107,
+        "degenerate0": 1,
+        "degenerateoo": 2
+      }
+    },
+    {
+      "q": 131,
+      "signs": [
+        -1,
+        -1
+      ],
+      "targets": [
+        1,
+        1
+      ],
+      "matches": {
+        "generic": [],
+        "degenerate0": [],
+        "degenerateoo": []
+      },
+      "eliminated": true,
+      "candidate_counts": {
+        "generic": 129,
+        "degenerate0": 5,
+        "degenerateoo": 1
+      }
+    },
+    {
+      "q": 139,
+      "signs": [
+        -1,
+        -1
+      ],
+      "targets": [
+        0,
+        0
+      ],
+      "matches": {
+        "generic": [
+          "x^2 + 21*x + 49"
+        ],
+        "degenerate0": [],
+        "degenerateoo": []
+      },
+      "eliminated": false,
+      "candidate_counts": {
+        "generic": 137,
+        "degenerate0": 1,
+        "degenerateoo": 2
+      }
+    },
+    {
+      "q": 149,
+      "signs": [
+        1,
+        1
+      ],
+      "targets": [
+        3,
+        3
+      ],
+      "matches": {
+        "generic": [
+          "x^2 - 6*x - 236",
+          "x^2 + 29*x + 149",
+          "x + 4",
+          "x^2 - 27*x + 121",
+          "x^2 + 29*x + 149",
+          "x^2 + 8*x - 229"
+        ],
+        "degenerate0": [
+          "x + 298"
+        ],
+        "degenerateoo": [
+          "x + 298"
+        ]
+      },
+      "eliminated": false,
+      "candidate_counts": {
+        "generic": 147,
+        "degenerate0": 1,
+        "degenerateoo": 1
+      }
+    },
+    {
+      "q": 151,
+      "signs": [
+        1,
+        1
+      ],
+      "targets": [
+        5,
+        5
+      ],
+      "matches": {
+        "generic": [
+          "x + 9",
+          "x^2 - 17*x + 11"
+        ],
+        "degenerate0": [],
+        "degenerateoo": []
+      },
+      "eliminated": false,
+      "candidate_counts": {
+        "generic": 149,
+        "degenerate0": 5,
+        "degenerateoo": 2
+      }
+    },
+    {
+      "q": 179,
+      "signs": [
+        1,
+        1
+      ],
+      "targets": [
+        5,
+        5
+      ],
+      "matches": {
+        "generic": [
+          "x^2 - 3*x - 549"
+        ],
+        "degenerate0": [],
+        "degenerateoo": []
+      },
+      "eliminated": false,
+      "candidate_counts": {
+        "generic": 177,
+        "degenerate0": 1,
+        "degenerateoo": 1
+      }
+    },
+    {
+      "q": 181,
+      "signs": [
+        1,
+        1
+      ],
+      "targets": [
+        0,
+        0
+      ],
+      "matches": {
+        "generic": [
+          "x^2 - 245",
+          "x^2 - 14*x - 196",
+          "x^2 - 245",
+          "x^2 + 14*x - 196",
+          "x^2 - 245",
+          "x - 14"
+        ],
+        "degenerate0": [],
+        "degenerateoo": []
+      },
+      "eliminated": false,
+      "candidate_counts": {
+        "generic": 179,
+        "degenerate0": 5,
+        "degenerateoo": 2
+      }
+    },
+    {
+      "q": 191,
+      "signs": [
+        -1,
+        -1
+      ],
+      "targets": [
+        4,
+        4
+      ],
+      "matches": {
+        "generic": [
+          "x^2 + 20*x - 145",
+          "x - 11",
+          "x + 3",
+          "x^2 + 6*x - 236"
+        ],
+        "degenerate0": [],
+        "degenerateoo": []
+      },
+      "eliminated": false,
+      "candidate_counts": {
+        "generic": 189,
+        "degenerate0": 5,
+        "degenerateoo": 1
+      }
+    },
+    {
+      "q": 199,
+      "signs": [
+        -1,
+        -1
+      ],
+      "targets": [
+        3,
+        3
+      ],
+      "matches": {
+        "generic": [
+          "x^2 - 6*x - 236"
+        ],
+        "degenerate0": [],
+        "degenerateoo": []
+      },
+      "eliminated": false,
+      "candidate_counts": {
+        "generic": 197,
+        "degenerate0": 1,
+        "degenerateoo": 2
+      }
+    },
+    {
+      "q": 211,
+      "signs": [
+        1,
+        1
+      ],
+      "targets": [
+        2,
+        2
+      ],
+      "matches": {
+        "generic": [
+          "x^2 - 25*x + 95",
+          "x^2 - 25*x + 95",
+          "x^2 + 3*x - 59",
+          "x - 9",
+          "x^2 + 24*x - 101",
+          "x - 16",
+          "x^2 - 25*x + 95"
+        ],
+        "degenerate0": [],
+        "degenerateoo": []
+      },
+      "eliminated": false,
+      "candidate_counts": {
+        "generic": 209,
+        "degenerate0": 5,
+        "degenerateoo": 2
+      }
+    },
+    {
+      "q": 229,
+      "signs": [
+        -1,
+        -1
+      ],
+      "targets": [
+        1,
+        1
+      ],
+      "matches": {
+        "generic": [
+          "x^2 + 19*x + 29",
+          "x + 6",
+          "x^2 + 5*x - 55",
+          "x - 1",
+          "x^2 + 26*x - 76"
+        ],
+        "degenerate0": [],
+        "degenerateoo": [
+          "x - 218"
+        ]
+      },
+      "eliminated": false,
+      "candidate_counts": {
+        "generic": 227,
+        "degenerate0": 1,
+        "degenerateoo": 2
+      }
+    },
+    {
+      "q": 239,
+      "signs": [
+        1,
+        1
+      ],
+      "targets": [
+        2,
+        2
+      ],
+      "matches": {
+        "generic": [
+          "x^2 + 17*x + 11",
+          "x^2 - 4*x - 241",
+          "x^2 - 18*x - 164",
+          "x^2 + 17*x + 11",
+          "x^2 + 10*x - 220"
+        ],
+        "degenerate0": [],
+        "degenerateoo": []
+      },
+      "eliminated": false,
+      "candidate_counts": {
+        "generic": 237,
+        "degenerate0": 1,
+        "degenerateoo": 1
+      }
+    },
+    {
+      "q": 241,
+      "signs": [
+        1,
+        1
+      ],
+      "targets": [
+        4,
+        4
+      ],
+      "matches": {
+        "generic": [
+          "x + 3",
+          "x^2 - 15*x - 5",
+          "x^2 + 6*x - 236"
+        ],
+        "degenerate0": [],
+        "degenerateoo": []
+      },
+      "eliminated": false,
+      "candidate_counts": {
+        "generic": 239,
+        "degenerate0": 5,
+        "degenerateoo": 2
+      }
+    },
+    {
+      "q": 251,
+      "signs": [
+        -1,
+        -1
+      ],
+      "targets": [
+        0,
+        0
+      ],
+      "matches": {
+        "generic": [
+          "x^2 - 21*x + 49",
+          "x + 21",
+          "x^2 - 14*x - 196",
+          "x^2 - 245",
+          "x^2 + 7*x - 49",
+          "x^2 + 14*x - 196",
+          "x - 7",
+          "x + 28",
+          "x + 21"
+        ],
+        "degenerate0": [],
+        "degenerateoo": []
+      },
+      "eliminated": false,
+      "candidate_counts": {
+        "generic": 249,
+        "degenerate0": 5,
+        "degenerateoo": 1
+      }
+    },
+    {
+      "q": 269,
+      "signs": [
+        1,
+        1
+      ],
+      "targets": [
+        4,
+        4
+      ],
+      "matches": {
+        "generic": [
+          "x + 31",
+          "x^2 + 20*x - 145"
+        ],
+        "degenerate0": [],
+        "degenerateoo": []
+      },
+      "eliminated": false,
+      "candidate_counts": {
+        "generic": 267,
+        "degenerate0": 1,
+        "degenerateoo": 1
+      }
+    },
+    {
+      "q": 271,
+      "signs": [
+        1,
+        1
+      ],
+      "targets": [
+        6,
+        6
+      ],
+      "matches": {
+        "generic": [
+          "x^2 - 5*x - 55",
+          "x - 13",
+          "x^2 + 16*x - 181",
+          "x^2 - 12*x - 209",
+          "x^2 - 33*x + 211",
+          "x + 8",
+          "x^2 - 33*x + 211",
+          "x^2 + 37*x + 281"
+        ],
+        "degenerate0": [],
+        "degenerateoo": []
+      },
+      "eliminated": false,
+      "candidate_counts": {
+        "generic": 269,
+        "degenerate0": 5,
+        "degenerateoo": 2
+      }
+    },
+    {
+      "q": 281,
+      "signs": [
+        -1,
+        -1
+      ],
+      "targets": [
+        5,
+        5
+      ],
+      "matches": {
+        "generic": [
+          "x^2 + 25*x + 95",
+          "x^2 - 17*x + 11"
+        ],
+        "degenerate0": [],
+        "degenerateoo": [
+          "x + 562"
+        ]
+      },
+      "eliminated": false,
+      "candidate_counts": {
+        "generic": 279,
+        "degenerate0": 5,
+        "degenerateoo": 1
+      }
+    },
+    {
+      "q": 311,
+      "signs": [
+        -1,
+        -1
+      ],
+      "targets": [
+        3,
+        3
+      ],
+      "matches": {
+        "generic": [
+          "x^2 + 8*x - 229",
+          "x + 25",
+          "x + 4",
+          "x^2 + 15*x - 5"
+        ],
+        "degenerate0": [],
+        "degenerateoo": []
+      },
+      "eliminated": false,
+      "candidate_counts": {
+        "generic": 309,
+        "degenerate0": 5,
+        "degenerateoo": 1
+      }
+    },
+    {
+      "q": 331,
+      "signs": [
+        1,
+        1
+      ],
+      "targets": [
+        3,
+        3
+      ],
+      "matches": {
+        "generic": [
+          "x^2 - 41*x + 359",
+          "x^2 - 13*x - 19",
+          "x - 24",
+          "x^2 + 22*x - 124"
+        ],
+        "degenerate0": [],
+        "degenerateoo": []
+      },
+      "eliminated": false,
+      "candidate_counts": {
+        "generic": 329,
+        "degenerate0": 5,
+        "degenerateoo": 2
+      }
+    },
+    {
+      "q": 349,
+      "signs": [
+        -1,
+        -1
+      ],
+      "targets": [
+        0,
+        0
+      ],
+      "matches": {
+        "generic": [
+          "x^2 - 245",
+          "x^2 - 7*x - 539",
+          "x^2 + 7*x - 49",
+          "x^2 - 245",
+          "x - 14",
+          "x^2 + 49*x + 539"
+        ],
+        "degenerate0": [],
+        "degenerateoo": []
+      },
+      "eliminated": false,
+      "candidate_counts": {
+        "generic": 347,
+        "degenerate0": 1,
+        "degenerateoo": 2
+      }
+    },
+    {
+      "q": 359,
+      "signs": [
+        1,
+        1
+      ],
+      "targets": [
+        3,
+        3
+      ],
+      "matches": {
+        "generic": [
+          "x^2 + 36*x + 79",
+          "x^2 - 41*x + 359",
+          "x^2 + x - 551",
+          "x + 11"
+        ],
+        "degenerate0": [
+          "x + 718"
+        ],
+        "degenerateoo": [
+          "x + 718"
+        ]
+      },
+      "eliminated": false,
+      "candidate_counts": {
+        "generic": 357,
+        "degenerate0": 1,
+        "degenerateoo": 1
+      }
+    },
+    {
+      "q": 379,
+      "signs": [
+        -1,
+        -1
+      ],
+      "targets": [
+        5,
+        5
+      ],
+      "matches": {
+        "generic": [
+          "x^2 + 11*x - 31",
+          "x - 33",
+          "x^2 - 10*x - 955",
+          "x^2 - 45*x + 445",
+          "x^2 - 17*x - 479",
+          "x^2 + 25*x + 95",
+          "x^2 - 24*x - 101",
+          "x + 2"
+        ],
+        "degenerate0": [
+          "x + 758"
+        ],
+        "degenerateoo": []
+      },
+      "eliminated": false,
+      "candidate_counts": {
+        "generic": 377,
+        "degenerate0": 1,
+        "degenerateoo": 2
+      }
+    },
+    {
+      "q": 389,
+      "signs": [
+        1,
+        1
+      ],
+      "targets": [
+        5,
+        5
+      ],
+      "matches": {
+        "generic": [
+          "x^2 + 18*x - 164",
+          "x + 16",
+          "x^2 + 25*x + 95",
+          "x + 9",
+          "x^2 - 31*x + 179",
+          "x^2 - 17*x - 479",
+          "x^2 + 4*x - 241"
+        ],
+        "degenerate0": [],
+        "degenerateoo": []
+      },
+      "eliminated": false,
+      "candidate_counts": {
+        "generic": 387,
+        "degenerate0": 1,
+        "degenerateoo": 1
+      }
+    }
+  ]
+}

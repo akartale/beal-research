@@ -1,0 +1,71 @@
+{
+  "level": "(3)^2*(sqrt(5))^2",
+  "exponent": 2,
+  "dimension": 226,
+  "targets": {
+    "T11a": 2,
+    "T11b": 2,
+    "T19a": 1,
+    "T19b": 1,
+    "T29a": 2,
+    "T29b": 2
+  },
+  "rank_chain": [
+    {
+      "after": "T11a",
+      "rank": 214,
+      "dimension": 12
+    },
+    {
+      "after": "T11b",
+      "rank": 218,
+      "dimension": 8
+    },
+    {
+      "after": "T19a",
+      "rank": 226,
+      "dimension": 0
+    },
+    {
+      "after": "T19b",
+      "rank": 226,
+      "dimension": 0
+    },
+    {
+      "after": "T29a",
+      "rank": 226,
+      "dimension": 0
+    },
+    {
+      "after": "T29b",
+      "rank": 226,
+      "dimension": 0
+    }
+  ],
+  "survivors_dimension": 0,
+  "operator_nnz": {
+    "T11a": 2630,
+    "T11b": 2630,
+    "T19a": 4308,
+    "T19b": 4308,
+    "T29a": 6312,
+    "T29b": 6312
+  },
+  "operator_sha256": {
+    "T11a": "dcb88d5f2ccb34fd8476d83e9077b4c5aae9bc090a358890b1396dfd4eeff73b",
+    "T11b": "46fae25d37fb3db053461974901574c3840aa433c7ec9505a8897cdf687ccb3b",
+    "T19a": "c808d9757e266b5b8600c738ee72cb600fb23e4cc1391db9a2e2fb94508282df",
+    "T19b": "753e493f2fb38055fdc5fb06c7f6f5f2c5135e890ac8db0a6a72fb50d3d46ba9",
+    "T29a": "f9a260b7cbaccadb824f32d92ad896b0969be7c5421672290a9ce0c57894dcac",
+    "T29b": "4905e05309dd12e6932e29681c443bca0aad140c171de2981e8788acd9430bce"
+  },
+  "all_pairwise_commute": true,
+  "row_sum_checks": true,
+  "source_caches": [
+    "hecke_mod7_cache.pkl",
+    "hecke_t11_conjugate_mod7.pkl",
+    "hecke_t19_pair_mod7.pkl",
+    "hecke_t29_pair_mod7.pkl"
+  ],
+  "script_sha256": "1f98b49e4c55736a2bb428a30d3fe507e4fbc2f05154b53463277d0193f07410"
+}

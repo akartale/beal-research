@@ -1,0 +1,10 @@
+default(parisize,"1G");
+x='x;
+Fpol=x^2-x-1;
+Cpol=polcyclo(7);
+T=polcompositum(Fpol,Cpol,1)[1][1];
+K=bnfinit(T,1);
+P=idealprimedec(K,7)[1];
+print("P_EF=",P.e," ",P.f," N=",idealnorm(K,P));
+for(n=1,10,B=bnrinit(K,idealpow(K,P,n),1);cyc=B.cyc;r7=sum(i=1,#cyc,valuation(cyc[i],7));print("n=",n," cyc=",cyc," v7_order=",r7));
+quit;

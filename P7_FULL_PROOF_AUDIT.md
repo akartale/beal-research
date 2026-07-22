@@ -1,161 +1,143 @@
-# Full proof audit for the signature (3,5,7)
+# Full proof audit for the signature `(3,5,7)`
 
-## Translation to the source paper
+_Last synchronized: 2026-07-21_
 
-Our equation is
+## Scope
 
-    A^3 + B^5 = C^7.
+This file records the current theorem-level structure of the modular-method argument. It must be read together with:
 
-It becomes the paper's equation
+- `CURRENT_PROOF_SNAPSHOT.md` — frozen mathematical status;
+- `LOGICAL_PROOF_AUDIT.md` — dependency and circularity audit;
+- `LEMMAS_ABCD_REAUDIT.md` — detailed status of the irreducibility lemmas;
+- `PROOF_ELEMENT_INDEX.md` — map of proof artifacts and certificates.
 
-    x^5 + y^p + z^3 = 0
+The large arithmetic computations were not rerun for this audit. Their outputs are treated as previously certified computational inputs. The present audit checks logical use of those inputs.
 
-with
+## Source-variable translation
 
-    p = 7,
-    x = B,
-    y = -C,
-    z = A.
+The equation
 
-Thus the paper's variables (a,b,c) correspond to
+```text
+A^3 + B^5 = C^7
+```
 
-    (a,b,c) = (B,-C,A).
+matches the source convention
 
-## Crucial conclusion
+```text
+x^5 + y^p + z^3 = 0
+```
 
-Theorem A of Pacetti--Villagra Torcomian explicitly excludes
+under
 
-    p in {2,3,5,7,11,13,19,29,31,41,61,71,79,89,101,109}.
+```text
+p = 7,
+x = B,
+y = -C,
+z = A,
+(a,b,c) = (B,-C,A).
+```
 
-In particular, p=7 is not covered by their final theorem. Therefore proving
-absolute irreducibility at 7 does not by itself prove the nonexistence of
-primitive solutions to A^3+B^5=C^7.
+The source paper's final theorem excludes `p=7`. Therefore the repository must independently close residual irreducibility and every Step-IV candidate level.
 
-## What absolute irreducibility would accomplish
+## Residual irreducibility chain
 
-Once Lemmas A and B in `P7_IRREDUCIBILITY_ARGUMENT.md` are proved, the
-reducible branch for p=7 is removed. This completes Step III of the modular
-method for the chosen residual RM representation.
+### Lemma A — finite-flat inertia types
 
-It does not complete Step IV. One must still eliminate every Hilbert newform
-whose residual representation can remain congruent mod 7 to the Frey
-representation.
+**Status: closed in the current audit.**
 
-## Remaining Step-IV branches
+Raynaud's finite-flat Jordan--Hoelder statement applies at the unique prime above `7`, where the absolute ramification index is `1`. Frobenius conjugacy over residue cardinality `49` forces period-two Raynaud digits. The only inertia exponent multisets are
 
-The source paper's general elimination leaves three kinds of obstruction:
+```text
+{0,8} and {1,7}.
+```
 
-1. CM Hilbert modular forms;
-2. the two ghost forms attached to t=-1/8 and t=9/8;
-3. additional forms whose Mazur bounds are divisible by 7.
+The proof does not assume that a stable line is defined over `F_49`.
 
-The elementary argument that t=-1/8 and t=9/8 are not actual primitive
-specializations does not eliminate residual congruences to their mod-7
-representations. A separate local-type or residual comparison is required.
+### Lemma B — conductor bounds
 
-Similarly, proving that the Frey characteristic-zero object has no CM does not
-by itself rule out a mod-7 congruence to a CM form.
+**Status: closed in the current audit.**
 
-## Candidate sets currently known
+The Artin-conductor comparison with semisimplification is proved directly. The branchwise source conductor exponents have been checked under the exact variable translation in `PRIMITIVE_VALUATION_CONDUCTOR_TABLE.md`. The selected ordinary character factors through the prime-to-`7` ray modulus, while the niveau-two branch allows one power of the prime above `7`.
 
-### Level (2,2): 3^2 (sqrt(5))^2
+### Niveau-two branch
 
-The published output has exceptional-prime set
+**Status: eliminated.**
 
-    {2,3,5,11,19,29}
+The ray-class exact sequence shows that every globalized tame exponent is even. This contradicts the niveau-two exponents `1` and `7`. This argument does not use irreducibility or level lowering.
 
-for every form outside the Bad set. Since 7 is absent, the complete p=7
-candidate set at this level is exactly
+### Lemma C — ordinary ray characters
 
-    {3,9,12}.
+**Status: closed.**
 
-These three forms are CM forms in the source paper.
+The ray class group is `Z/180 x Z/2`, giving exactly `360` algebraic-closure-valued characters. The use of `F_(7^12)` is only a common realization field.
 
-### Level (3,2): 3^3 (sqrt(5))^2
+### Lemma D — ordinary branch elimination
 
-The detailed official output in Git commit
-`77951edd8576e450c7cf3cec78404b5521edb193` gives the exact p=7 candidate set
+**Status: open at one explicit character.**
 
-    {21,22,26,33,61,65,78,92,98}.
+The valid chain is:
 
-Here 65 and 78 are unconditionally Bad for the standard auxiliary-prime sieve;
-the other seven retain 7 in their individual bounds.  This historical commit
-is now recorded as the primary provenance because the current transcript no
-longer prints the individual lines.
+```text
+360 ordinary characters
+  -> full four-branch auxiliary-prime sieve
+4 quadratic characters: (0,0), (0,1), (90,0), (90,1)
+  -> corrected toric splitting at 7
+3 characters: (0,1), (90,0), (90,1)
+  -> local conductor contradictions at 3 and sqrt(5)
+1 character: (90,0)
+```
 
-### Levels (2,3) and (3,3)
+The survivor `(90,0)` is quadratically ramified at both bad primes and is compatible only with conductor pair `(2,2)`.
 
-The official computation repository has now been imported at
-`upstream/GFE-5p3`.  Its transcript gives unconditional Bad sets
+The exact level-`(2,2)` Brandt module has no matching eigensystem. However, the source theorem placing the representation at that lowered level assumes irreducibility. Using that computation to prove irreducibility would therefore be circular.
 
-    B_23={1,7,11,12,13,16,21},
-    B_33={22,39}.
+The attempted direct auxiliary-prime certificate also does not close the gap because it omits the separate `t=1` degeneration, which quadratic characters satisfy automatically.
 
-The published calls use `flag=false`; their aggregate exceptional-prime lists
-contain 7, so the complete individual p=7 candidate sets outside these Bad
-sets still cannot be recovered from the transcript alone.  The correct level
-norms are 10125 and 91125 because the inert ideal `(3)` has norm 9.  The ideal of norm 10125 is unique, hence its natural LMFDB ideal label is
-`10125.1`; however the corresponding form endpoints return no records.  This
-indicates missing database coverage rather than an ideal-label ambiguity.
-The historical Voight static-data links for discriminant 5 are presently stale
-(HTTP 404), and a full audit of the source repository history found no deleted
-per-orbit `(2,3)` or `(3,3)` output.  Thus a new open computation or an external
-Hecke-data export is genuinely required.  See `P7_STEP_IV_CANDIDATE_INVENTORY.md`.
+The preferred remaining route is the bounded all-cusp parallel-weight-two Eisenstein argument recorded in `P7_900_EISENSTEIN_NECESSITY_BRIDGE_AUDIT.md`. The candidate constant-term factor is `16/15`, a `7`-adic unit, but five exact stabilization, integrality, congruence-transfer, and all-cusp checks remain.
 
-## Translation of the paper's auxiliary local hypotheses
+Therefore absolute irreducibility at `p=7` is not yet proved.
 
-Theorem B assumes that the paper's b is odd and divisible by 3 or 5. In our
-variables this means
+## Step-IV computational status
 
-    C is odd and 3|C or 5|C.
+All four candidate levels are computationally eliminated in the implemented exact modules:
 
-Moreover Theorem B still excludes p=7, so it cannot be applied directly.
+| Level | Computational status | Theorem-level status |
+|---|---|---|
+| `(2,2)` | no matching candidate survives local/Brandt computations | local-integral completeness and use after irreducibility still require certification |
+| `(2,3)` | exact paired Brandt sieve gives dimension zero | JL/Brandt bridge pending |
+| `(3,2)` | exact paired Brandt sieve gives dimension zero | JL/Brandt bridge pending |
+| `(3,3)` | exact paired Brandt sieve gives dimension zero | JL/Brandt bridge pending |
 
-Theorem C uses 3 not dividing the paper's c to distinguish the ghost local
-type. In our variables this is
+These computations do not by themselves prove the final theorem. After irreducibility, the proof still requires exact identification of the relevant Hilbert spaces with the computed Brandt modules, including newspace completeness, oldform control, Eisenstein separation, multiplicities, residue fields, and Hecke normalization.
 
-    3 does not divide A.
+## Acyclicity verdict
 
-This may provide a useful local elimination for a subcase, but it does not
-cover all primitive solutions.
+The current canonical proof structure is acyclic:
 
-## Exact logical status
+```text
+source local inputs
+ -> Lemmas A and B
+ -> niveau-two elimination and Lemma C
+ -> Lemma D reductions
+ -> OPEN elimination of (90,0)
+ -> absolute irreducibility
+ -> level lowering
+ -> JL/Brandt identification
+ -> computational zero eigenspaces
+ -> final theorem
+```
 
-At level `(2,2)`, norm 2025, the verified local arguments eliminate all three
-candidate forms in every 7-adic branch.  The last cross-branch, `h,l` at
-`t=infinity`, is separated by the rank of divided Frobenius on the proper
-four-dimensional crystalline lattice: rank 2 for every Frey infinity class
-and rank 1 for the CM local systems.  The `e`, `t=0` branch is reproducibly
-eliminated by `scripts/p7_form_e_exact_branches.py`, with no compatible branch
-polynomial at auxiliary prime `ell=11`.
+The only detected circular shortcut is the rejected use of level-`(2,2)` Brandt vanishing to prove the irreducibility required to reach that level.
 
-See `P7_LEVEL2025_FINAL_LOCAL_LEMMA.md`,
-`P7_INFINITY_HL_DIVIDED_FROBENIUS.md`,
-`P7_FORM_E_QFROBENIUS_INTRINSICNESS.md`, and
-`P7_T1_TORIC_ELIMINATION.md`.  The official candidate inventory for all four
-levels is recorded in `P7_STEP_IV_CANDIDATE_INVENTORY.md`.
+## Exact remaining theorem obligations
 
-After proving Lemmas A and B:
+1. Eliminate `(90,0)` by a noncircular theorem-level argument.
+2. Complete primitive/sign/valuation exhaustiveness and source theorem citation integration.
+3. Certify the level-`(2,2)` integral local invariants and branch exhaustiveness.
+4. Prove the JL/Brandt identification and full relevant-space completeness at levels `(2,3)`, `(3,2)`, and `(3,3)`.
+5. Independently reproduce hashes and deterministic certificates from a clean environment.
+6. Produce a final manuscript with no conditional labels and obtain independent mathematical review.
 
-    absolute irreducibility at p=7: complete;
-    modularity and conductor framework: inherited from the source papers;
-    level (2,2) newform elimination: complete, subject to the cited standard local inputs;
-    levels (3,2), (2,3), (3,3): still open;
-    full nonexistence theorem for A^3+B^5=C^7: not yet established.
+## Final verdict
 
-## Required path to a complete private-signature theorem
-
-1. Prove Lemma A: exact finite-flat inertia types at p7.
-2. Prove Lemma B: diagonal-character conductor bounds.
-3. Obtain the complete p=7 candidate newform list at all four levels.
-4. Identify each candidate by coefficient field, CM status, and ghost origin.
-5. Build local residual tests specifically mod 7, preserving paired primes and
-   embeddings.
-6. Eliminate CM congruences.
-7. Eliminate ghost congruences, possibly using local type at 3 and separate
-   treatment of 3|A.
-8. Eliminate all additional p=7 exceptional forms.
-9. Audit all primitive divisibility subcases and signs.
-
-Only after all nine items are closed can one claim the full primitive
-signature-(3,5,7) result.
+The proof package is logically coherent after synchronization, but incomplete. Lemmas A, B, and C are closed in the current audit. Lemma D is reduced to one explicit survivor `(90,0)` and remains open. The full signature-`(3,5,7)` theorem must not yet be claimed.

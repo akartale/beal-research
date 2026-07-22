@@ -1,0 +1,15 @@
+default(parisize,"512M");
+default(parisizemax,"2G");
+out=fileopen("/workspace/research/beal/data/probe_G_structure_v14.log","w");
+read("/workspace/research/beal/scripts/quaternion_7p3_eichler_lib.gp");
+read("/workspace/research/beal/data/fdom_level35721_tuned.txt");
+all=read("/workspace/research/beal/data/fdom_level35721_reconstruct_batched_v9_checkpoint.bin");
+cp=all[#all]; U=cp[2]; G=PRESENTATION[1];
+filewrite(out,Str("PRESENTATION_TYPE=",type(PRESENTATION)," LEN=",#PRESENTATION));
+filewrite(out,Str("G_TYPE=",type(G)," G_LEN=",#G," G1_TYPE=",type(G[1])));
+filewrite(out,Str("U_TYPE=",type(U)," U_LEN=",#U));
+for(i=1,#U,filewrite(out,Str("U",i,"_TYPE=",type(U[i]))));
+filewrite(out,Str("U1_TYPE=",type(U[1])," U1_LEN=",#U[1]," U1_1_TYPE=",type(U[1][1])));
+filewrite(out,Str("G1=",G[1]));
+filewrite(out,Str("U1_1=",U[1][1]));
+fileclose(out);quit;

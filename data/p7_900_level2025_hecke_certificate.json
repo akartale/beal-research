@@ -1,0 +1,1230 @@
+{
+  "field": "F_49 = F_7[u]/(u^2+1)",
+  "targets": {
+    "11": 2,
+    "19": 1,
+    "29": 2
+  },
+  "packets_tested": 14,
+  "survivors": [],
+  "rows": [
+    {
+      "label": "2.2.5.1-2025.1-a",
+      "hecke_polynomial": "x",
+      "roots_in_F49": [
+        "(0,0)"
+      ],
+      "surviving_roots": [],
+      "survives": false,
+      "root_checks": [
+        {
+          "root": "(0,0)",
+          "checks": [
+            {
+              "norm": 11,
+              "index": 1,
+              "value": "(5,0)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 11,
+              "index": 2,
+              "value": "(5,0)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 19,
+              "index": 1,
+              "value": "(2,0)",
+              "target": "(1,0)",
+              "matched": false
+            },
+            {
+              "norm": 19,
+              "index": 2,
+              "value": "(2,0)",
+              "target": "(1,0)",
+              "matched": false
+            },
+            {
+              "norm": 29,
+              "index": 1,
+              "value": "(4,0)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 29,
+              "index": 2,
+              "value": "(4,0)",
+              "target": "(2,0)",
+              "matched": false
+            }
+          ],
+          "survives": false
+        }
+      ]
+    },
+    {
+      "label": "2.2.5.1-2025.1-b",
+      "hecke_polynomial": "x",
+      "roots_in_F49": [
+        "(0,0)"
+      ],
+      "surviving_roots": [],
+      "survives": false,
+      "root_checks": [
+        {
+          "root": "(0,0)",
+          "checks": [
+            {
+              "norm": 11,
+              "index": 1,
+              "value": "(4,0)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 11,
+              "index": 2,
+              "value": "(4,0)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 19,
+              "index": 1,
+              "value": "(3,0)",
+              "target": "(1,0)",
+              "matched": false
+            },
+            {
+              "norm": 19,
+              "index": 2,
+              "value": "(3,0)",
+              "target": "(1,0)",
+              "matched": false
+            },
+            {
+              "norm": 29,
+              "index": 1,
+              "value": "(5,0)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 29,
+              "index": 2,
+              "value": "(5,0)",
+              "target": "(2,0)",
+              "matched": false
+            }
+          ],
+          "survives": false
+        }
+      ]
+    },
+    {
+      "label": "2.2.5.1-2025.1-c",
+      "hecke_polynomial": "x",
+      "roots_in_F49": [
+        "(0,0)"
+      ],
+      "surviving_roots": [],
+      "survives": false,
+      "root_checks": [
+        {
+          "root": "(0,0)",
+          "checks": [
+            {
+              "norm": 11,
+              "index": 1,
+              "value": "(0,0)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 11,
+              "index": 2,
+              "value": "(0,0)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 19,
+              "index": 1,
+              "value": "(1,0)",
+              "target": "(1,0)",
+              "matched": true
+            },
+            {
+              "norm": 19,
+              "index": 2,
+              "value": "(1,0)",
+              "target": "(1,0)",
+              "matched": true
+            },
+            {
+              "norm": 29,
+              "index": 1,
+              "value": "(0,0)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 29,
+              "index": 2,
+              "value": "(0,0)",
+              "target": "(2,0)",
+              "matched": false
+            }
+          ],
+          "survives": false
+        }
+      ]
+    },
+    {
+      "label": "2.2.5.1-2025.1-d",
+      "hecke_polynomial": "x",
+      "roots_in_F49": [
+        "(0,0)"
+      ],
+      "surviving_roots": [],
+      "survives": false,
+      "root_checks": [
+        {
+          "root": "(0,0)",
+          "checks": [
+            {
+              "norm": 11,
+              "index": 1,
+              "value": "(0,0)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 11,
+              "index": 2,
+              "value": "(0,0)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 19,
+              "index": 1,
+              "value": "(6,0)",
+              "target": "(1,0)",
+              "matched": false
+            },
+            {
+              "norm": 19,
+              "index": 2,
+              "value": "(6,0)",
+              "target": "(1,0)",
+              "matched": false
+            },
+            {
+              "norm": 29,
+              "index": 1,
+              "value": "(0,0)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 29,
+              "index": 2,
+              "value": "(0,0)",
+              "target": "(2,0)",
+              "matched": false
+            }
+          ],
+          "survives": false
+        }
+      ]
+    },
+    {
+      "label": "2.2.5.1-2025.1-e",
+      "hecke_polynomial": "x",
+      "roots_in_F49": [
+        "(0,0)"
+      ],
+      "surviving_roots": [],
+      "survives": false,
+      "root_checks": [
+        {
+          "root": "(0,0)",
+          "checks": [
+            {
+              "norm": 11,
+              "index": 1,
+              "value": "(0,0)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 11,
+              "index": 2,
+              "value": "(0,0)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 19,
+              "index": 1,
+              "value": "(4,0)",
+              "target": "(1,0)",
+              "matched": false
+            },
+            {
+              "norm": 19,
+              "index": 2,
+              "value": "(4,0)",
+              "target": "(1,0)",
+              "matched": false
+            },
+            {
+              "norm": 29,
+              "index": 1,
+              "value": "(0,0)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 29,
+              "index": 2,
+              "value": "(0,0)",
+              "target": "(2,0)",
+              "matched": false
+            }
+          ],
+          "survives": false
+        }
+      ]
+    },
+    {
+      "label": "2.2.5.1-2025.1-f",
+      "hecke_polynomial": "x",
+      "roots_in_F49": [
+        "(0,0)"
+      ],
+      "surviving_roots": [],
+      "survives": false,
+      "root_checks": [
+        {
+          "root": "(0,0)",
+          "checks": [
+            {
+              "norm": 11,
+              "index": 1,
+              "value": "(5,0)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 11,
+              "index": 2,
+              "value": "(5,0)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 19,
+              "index": 1,
+              "value": "(5,0)",
+              "target": "(1,0)",
+              "matched": false
+            },
+            {
+              "norm": 19,
+              "index": 2,
+              "value": "(5,0)",
+              "target": "(1,0)",
+              "matched": false
+            },
+            {
+              "norm": 29,
+              "index": 1,
+              "value": "(3,0)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 29,
+              "index": 2,
+              "value": "(3,0)",
+              "target": "(2,0)",
+              "matched": false
+            }
+          ],
+          "survives": false
+        }
+      ]
+    },
+    {
+      "label": "2.2.5.1-2025.1-g",
+      "hecke_polynomial": "x^2 - 18",
+      "roots_in_F49": [
+        "(2,0)",
+        "(5,0)"
+      ],
+      "surviving_roots": [],
+      "survives": false,
+      "root_checks": [
+        {
+          "root": "(2,0)",
+          "checks": [
+            {
+              "norm": 11,
+              "index": 1,
+              "value": "(5,0)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 11,
+              "index": 2,
+              "value": "(2,0)",
+              "target": "(2,0)",
+              "matched": true
+            },
+            {
+              "norm": 19,
+              "index": 1,
+              "value": "(2,0)",
+              "target": "(1,0)",
+              "matched": false
+            },
+            {
+              "norm": 19,
+              "index": 2,
+              "value": "(2,0)",
+              "target": "(1,0)",
+              "matched": false
+            },
+            {
+              "norm": 29,
+              "index": 1,
+              "value": "(5,0)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 29,
+              "index": 2,
+              "value": "(2,0)",
+              "target": "(2,0)",
+              "matched": true
+            }
+          ],
+          "survives": false
+        },
+        {
+          "root": "(5,0)",
+          "checks": [
+            {
+              "norm": 11,
+              "index": 1,
+              "value": "(2,0)",
+              "target": "(2,0)",
+              "matched": true
+            },
+            {
+              "norm": 11,
+              "index": 2,
+              "value": "(5,0)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 19,
+              "index": 1,
+              "value": "(2,0)",
+              "target": "(1,0)",
+              "matched": false
+            },
+            {
+              "norm": 19,
+              "index": 2,
+              "value": "(2,0)",
+              "target": "(1,0)",
+              "matched": false
+            },
+            {
+              "norm": 29,
+              "index": 1,
+              "value": "(2,0)",
+              "target": "(2,0)",
+              "matched": true
+            },
+            {
+              "norm": 29,
+              "index": 2,
+              "value": "(5,0)",
+              "target": "(2,0)",
+              "matched": false
+            }
+          ],
+          "survives": false
+        }
+      ]
+    },
+    {
+      "label": "2.2.5.1-2025.1-h",
+      "hecke_polynomial": "x^2 + 9*x + 19",
+      "roots_in_F49": [
+        "(6,2)",
+        "(6,5)"
+      ],
+      "surviving_roots": [],
+      "survives": false,
+      "root_checks": [
+        {
+          "root": "(6,2)",
+          "checks": [
+            {
+              "norm": 11,
+              "index": 1,
+              "value": "(6,5)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 11,
+              "index": 2,
+              "value": "(6,2)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 19,
+              "index": 1,
+              "value": "(0,0)",
+              "target": "(1,0)",
+              "matched": false
+            },
+            {
+              "norm": 19,
+              "index": 2,
+              "value": "(0,0)",
+              "target": "(1,0)",
+              "matched": false
+            },
+            {
+              "norm": 29,
+              "index": 1,
+              "value": "(0,0)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 29,
+              "index": 2,
+              "value": "(0,0)",
+              "target": "(2,0)",
+              "matched": false
+            }
+          ],
+          "survives": false
+        },
+        {
+          "root": "(6,5)",
+          "checks": [
+            {
+              "norm": 11,
+              "index": 1,
+              "value": "(6,2)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 11,
+              "index": 2,
+              "value": "(6,5)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 19,
+              "index": 1,
+              "value": "(0,0)",
+              "target": "(1,0)",
+              "matched": false
+            },
+            {
+              "norm": 19,
+              "index": 2,
+              "value": "(0,0)",
+              "target": "(1,0)",
+              "matched": false
+            },
+            {
+              "norm": 29,
+              "index": 1,
+              "value": "(0,0)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 29,
+              "index": 2,
+              "value": "(0,0)",
+              "target": "(2,0)",
+              "matched": false
+            }
+          ],
+          "survives": false
+        }
+      ]
+    },
+    {
+      "label": "2.2.5.1-2025.1-i",
+      "hecke_polynomial": "x^2 - 8",
+      "roots_in_F49": [
+        "(1,0)",
+        "(6,0)"
+      ],
+      "surviving_roots": [],
+      "survives": false,
+      "root_checks": [
+        {
+          "root": "(1,0)",
+          "checks": [
+            {
+              "norm": 11,
+              "index": 1,
+              "value": "(6,0)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 11,
+              "index": 2,
+              "value": "(1,0)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 19,
+              "index": 1,
+              "value": "(0,0)",
+              "target": "(1,0)",
+              "matched": false
+            },
+            {
+              "norm": 19,
+              "index": 2,
+              "value": "(0,0)",
+              "target": "(1,0)",
+              "matched": false
+            },
+            {
+              "norm": 29,
+              "index": 1,
+              "value": "(1,0)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 29,
+              "index": 2,
+              "value": "(6,0)",
+              "target": "(2,0)",
+              "matched": false
+            }
+          ],
+          "survives": false
+        },
+        {
+          "root": "(6,0)",
+          "checks": [
+            {
+              "norm": 11,
+              "index": 1,
+              "value": "(1,0)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 11,
+              "index": 2,
+              "value": "(6,0)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 19,
+              "index": 1,
+              "value": "(0,0)",
+              "target": "(1,0)",
+              "matched": false
+            },
+            {
+              "norm": 19,
+              "index": 2,
+              "value": "(0,0)",
+              "target": "(1,0)",
+              "matched": false
+            },
+            {
+              "norm": 29,
+              "index": 1,
+              "value": "(6,0)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 29,
+              "index": 2,
+              "value": "(1,0)",
+              "target": "(2,0)",
+              "matched": false
+            }
+          ],
+          "survives": false
+        }
+      ]
+    },
+    {
+      "label": "2.2.5.1-2025.1-j",
+      "hecke_polynomial": "x^2 + 3*x - 9",
+      "roots_in_F49": [
+        "(2,1)",
+        "(2,6)"
+      ],
+      "surviving_roots": [],
+      "survives": false,
+      "root_checks": [
+        {
+          "root": "(2,1)",
+          "checks": [
+            {
+              "norm": 11,
+              "index": 1,
+              "value": "(2,6)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 11,
+              "index": 2,
+              "value": "(2,1)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 19,
+              "index": 1,
+              "value": "(1,5)",
+              "target": "(1,0)",
+              "matched": false
+            },
+            {
+              "norm": 19,
+              "index": 2,
+              "value": "(1,2)",
+              "target": "(1,0)",
+              "matched": false
+            },
+            {
+              "norm": 29,
+              "index": 1,
+              "value": "(4,2)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 29,
+              "index": 2,
+              "value": "(4,5)",
+              "target": "(2,0)",
+              "matched": false
+            }
+          ],
+          "survives": false
+        },
+        {
+          "root": "(2,6)",
+          "checks": [
+            {
+              "norm": 11,
+              "index": 1,
+              "value": "(2,1)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 11,
+              "index": 2,
+              "value": "(2,6)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 19,
+              "index": 1,
+              "value": "(1,2)",
+              "target": "(1,0)",
+              "matched": false
+            },
+            {
+              "norm": 19,
+              "index": 2,
+              "value": "(1,5)",
+              "target": "(1,0)",
+              "matched": false
+            },
+            {
+              "norm": 29,
+              "index": 1,
+              "value": "(4,5)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 29,
+              "index": 2,
+              "value": "(4,2)",
+              "target": "(2,0)",
+              "matched": false
+            }
+          ],
+          "survives": false
+        }
+      ]
+    },
+    {
+      "label": "2.2.5.1-2025.1-k",
+      "hecke_polynomial": "x^2 - 8",
+      "roots_in_F49": [
+        "(1,0)",
+        "(6,0)"
+      ],
+      "surviving_roots": [],
+      "survives": false,
+      "root_checks": [
+        {
+          "root": "(1,0)",
+          "checks": [
+            {
+              "norm": 11,
+              "index": 1,
+              "value": "(6,0)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 11,
+              "index": 2,
+              "value": "(1,0)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 19,
+              "index": 1,
+              "value": "(0,0)",
+              "target": "(1,0)",
+              "matched": false
+            },
+            {
+              "norm": 19,
+              "index": 2,
+              "value": "(0,0)",
+              "target": "(1,0)",
+              "matched": false
+            },
+            {
+              "norm": 29,
+              "index": 1,
+              "value": "(6,0)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 29,
+              "index": 2,
+              "value": "(1,0)",
+              "target": "(2,0)",
+              "matched": false
+            }
+          ],
+          "survives": false
+        },
+        {
+          "root": "(6,0)",
+          "checks": [
+            {
+              "norm": 11,
+              "index": 1,
+              "value": "(1,0)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 11,
+              "index": 2,
+              "value": "(6,0)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 19,
+              "index": 1,
+              "value": "(0,0)",
+              "target": "(1,0)",
+              "matched": false
+            },
+            {
+              "norm": 19,
+              "index": 2,
+              "value": "(0,0)",
+              "target": "(1,0)",
+              "matched": false
+            },
+            {
+              "norm": 29,
+              "index": 1,
+              "value": "(1,0)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 29,
+              "index": 2,
+              "value": "(6,0)",
+              "target": "(2,0)",
+              "matched": false
+            }
+          ],
+          "survives": false
+        }
+      ]
+    },
+    {
+      "label": "2.2.5.1-2025.1-l",
+      "hecke_polynomial": "x^2 - 9*x + 19",
+      "roots_in_F49": [
+        "(1,2)",
+        "(1,5)"
+      ],
+      "surviving_roots": [],
+      "survives": false,
+      "root_checks": [
+        {
+          "root": "(1,2)",
+          "checks": [
+            {
+              "norm": 11,
+              "index": 1,
+              "value": "(1,5)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 11,
+              "index": 2,
+              "value": "(1,2)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 19,
+              "index": 1,
+              "value": "(0,0)",
+              "target": "(1,0)",
+              "matched": false
+            },
+            {
+              "norm": 19,
+              "index": 2,
+              "value": "(0,0)",
+              "target": "(1,0)",
+              "matched": false
+            },
+            {
+              "norm": 29,
+              "index": 1,
+              "value": "(0,0)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 29,
+              "index": 2,
+              "value": "(0,0)",
+              "target": "(2,0)",
+              "matched": false
+            }
+          ],
+          "survives": false
+        },
+        {
+          "root": "(1,5)",
+          "checks": [
+            {
+              "norm": 11,
+              "index": 1,
+              "value": "(1,2)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 11,
+              "index": 2,
+              "value": "(1,5)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 19,
+              "index": 1,
+              "value": "(0,0)",
+              "target": "(1,0)",
+              "matched": false
+            },
+            {
+              "norm": 19,
+              "index": 2,
+              "value": "(0,0)",
+              "target": "(1,0)",
+              "matched": false
+            },
+            {
+              "norm": 29,
+              "index": 1,
+              "value": "(0,0)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 29,
+              "index": 2,
+              "value": "(0,0)",
+              "target": "(2,0)",
+              "matched": false
+            }
+          ],
+          "survives": false
+        }
+      ]
+    },
+    {
+      "label": "2.2.5.1-2025.1-m",
+      "hecke_polynomial": "x^2 - 3*x - 9",
+      "roots_in_F49": [
+        "(5,1)",
+        "(5,6)"
+      ],
+      "surviving_roots": [],
+      "survives": false,
+      "root_checks": [
+        {
+          "root": "(5,1)",
+          "checks": [
+            {
+              "norm": 11,
+              "index": 1,
+              "value": "(5,6)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 11,
+              "index": 2,
+              "value": "(5,1)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 19,
+              "index": 1,
+              "value": "(1,2)",
+              "target": "(1,0)",
+              "matched": false
+            },
+            {
+              "norm": 19,
+              "index": 2,
+              "value": "(1,5)",
+              "target": "(1,0)",
+              "matched": false
+            },
+            {
+              "norm": 29,
+              "index": 1,
+              "value": "(3,2)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 29,
+              "index": 2,
+              "value": "(3,5)",
+              "target": "(2,0)",
+              "matched": false
+            }
+          ],
+          "survives": false
+        },
+        {
+          "root": "(5,6)",
+          "checks": [
+            {
+              "norm": 11,
+              "index": 1,
+              "value": "(5,1)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 11,
+              "index": 2,
+              "value": "(5,6)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 19,
+              "index": 1,
+              "value": "(1,5)",
+              "target": "(1,0)",
+              "matched": false
+            },
+            {
+              "norm": 19,
+              "index": 2,
+              "value": "(1,2)",
+              "target": "(1,0)",
+              "matched": false
+            },
+            {
+              "norm": 29,
+              "index": 1,
+              "value": "(3,5)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 29,
+              "index": 2,
+              "value": "(3,2)",
+              "target": "(2,0)",
+              "matched": false
+            }
+          ],
+          "survives": false
+        }
+      ]
+    },
+    {
+      "label": "2.2.5.1-2025.1-n",
+      "hecke_polynomial": "x^2 - 18",
+      "roots_in_F49": [
+        "(2,0)",
+        "(5,0)"
+      ],
+      "surviving_roots": [],
+      "survives": false,
+      "root_checks": [
+        {
+          "root": "(2,0)",
+          "checks": [
+            {
+              "norm": 11,
+              "index": 1,
+              "value": "(5,0)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 11,
+              "index": 2,
+              "value": "(2,0)",
+              "target": "(2,0)",
+              "matched": true
+            },
+            {
+              "norm": 19,
+              "index": 1,
+              "value": "(5,0)",
+              "target": "(1,0)",
+              "matched": false
+            },
+            {
+              "norm": 19,
+              "index": 2,
+              "value": "(5,0)",
+              "target": "(1,0)",
+              "matched": false
+            },
+            {
+              "norm": 29,
+              "index": 1,
+              "value": "(2,0)",
+              "target": "(2,0)",
+              "matched": true
+            },
+            {
+              "norm": 29,
+              "index": 2,
+              "value": "(5,0)",
+              "target": "(2,0)",
+              "matched": false
+            }
+          ],
+          "survives": false
+        },
+        {
+          "root": "(5,0)",
+          "checks": [
+            {
+              "norm": 11,
+              "index": 1,
+              "value": "(2,0)",
+              "target": "(2,0)",
+              "matched": true
+            },
+            {
+              "norm": 11,
+              "index": 2,
+              "value": "(5,0)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 19,
+              "index": 1,
+              "value": "(5,0)",
+              "target": "(1,0)",
+              "matched": false
+            },
+            {
+              "norm": 19,
+              "index": 2,
+              "value": "(5,0)",
+              "target": "(1,0)",
+              "matched": false
+            },
+            {
+              "norm": 29,
+              "index": 1,
+              "value": "(5,0)",
+              "target": "(2,0)",
+              "matched": false
+            },
+            {
+              "norm": 29,
+              "index": 2,
+              "value": "(2,0)",
+              "target": "(2,0)",
+              "matched": true
+            }
+          ],
+          "survives": false
+        }
+      ]
+    }
+  ]
+}

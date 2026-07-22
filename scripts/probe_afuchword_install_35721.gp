@@ -1,0 +1,17 @@
+default(parisize,"512M");
+default(parisizemax,"3G");
+install("afuchword","GG","afuchword","/workspace/research/beal/vendor/fdom-upstream/libfdom-2-15-2.so");
+out=fileopen("/workspace/research/beal/data/probe_afuchword_install_35721.txt","w");
+runprobe()={
+  my(P,wg,wi);
+  read("/workspace/research/beal/data/fdom_level35721_tuned.txt");
+  P=PRESENTATION;
+  wg=afuchword(bealX,P[1][1]);
+  wi=afuchword(bealX,[1,0,0,0,0,0,0,0,0,0,0,0]~);
+  filewrite(out,Str("GENERATOR_WORD=",wg));
+  filewrite(out,Str("IDENTITY_WORD=",wi));
+  filewrite(out,Str("GENERATOR_TYPE=",type(wg)));
+  1
+};
+iferr(runprobe(),err,filewrite(out,Str("ERROR=",err)));
+fileclose(out);quit;

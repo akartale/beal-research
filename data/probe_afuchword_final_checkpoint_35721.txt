@@ -1,0 +1,2 @@
+CHECKPOINTS=32 LASTIDX=1010 XX_LEN=18 U_LEN=9
+ERROR=error("not a function in function call")

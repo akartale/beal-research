@@ -147,9 +147,10 @@ class CRTP1Point:
 
 
 class CRTProjectiveLine:
-    def __init__(self, exponent_at_3: int) -> None:
-        crt = beal_level(exponent_at_3)
+    def __init__(self, exponent_at_3: int, exponent_at_5: int = 3) -> None:
+        crt = beal_level(exponent_at_3, exponent_at_5)
         self.exponent_at_3 = exponent_at_3
+        self.exponent_at_5 = exponent_at_5
         self.left = LocalProjectiveLine(crt.left, rational_prime=3, residue_size=9)
         self.right = LocalProjectiveLine(crt.right, rational_prime=5, residue_size=5)
 

@@ -27,8 +27,8 @@ def hecke_representatives_11():
     return tuple(orbit[0].conjugate() for orbit in orbits)
 
 
-def global_orbit_and_hecke(exponent_at_3: int, hecke_elements) -> tuple[list[int], list[dict[int, int]]]:
-    space = CRTProjectiveLine(exponent_at_3)
+def global_orbit_data(exponent_at_3: int, exponent_at_5: int = 3):
+    space = CRTProjectiveLine(exponent_at_3, exponent_at_5)
     left_split = LocalHamiltonSplitting.build(space.left.ring)
     right_split = LocalHamiltonSplitting.build(space.right.ring)
     unit_left = tuple(left_split.map(g) for g in icosian_group_generators())
@@ -50,6 +50,11 @@ def global_orbit_and_hecke(exponent_at_3: int, hecke_elements) -> tuple[list[int
     point_to_orbit = [root_to_orbit[dsu.find(i)] for i in range(space.order)]
     reps = [next(i for i in range(space.order) if point_to_orbit[i] == orbit) for orbit in range(len(roots))]
 
+    return space, left_split, right_split, left_order, reps, point_to_orbit
+
+
+def global_hecke_from_data(data, hecke_elements) -> tuple[list[int], list[dict[int, int]]]:
+    space, left_split, right_split, left_order, reps, point_to_orbit = data
     hecke_left = tuple(left_split.map(q) for q in hecke_elements)
     hecke_right = tuple(right_split.map(q) for q in hecke_elements)
     rows: list[dict[int, int]] = []
@@ -65,6 +70,14 @@ def global_orbit_and_hecke(exponent_at_3: int, hecke_elements) -> tuple[list[int
             row[target] = (row.get(target, 0) + 1) % 7
         rows.append({j: c for j, c in row.items() if c})
     return reps, rows
+
+
+def global_orbit_and_hecke(
+    exponent_at_3: int, hecke_elements, exponent_at_5: int = 3
+) -> tuple[list[int], list[dict[int, int]]]:
+    return global_hecke_from_data(
+        global_orbit_data(exponent_at_3, exponent_at_5), hecke_elements
+    )
 
 
 def sparse_product(left: list[dict[int, int]], right: list[dict[int, int]]) -> list[dict[int, int]]:

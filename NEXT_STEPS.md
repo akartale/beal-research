@@ -1,102 +1,94 @@
-# Next steps for signature `(3,5,7)`
+# Next steps
 
-Start from `CURRENT_PROOF_SNAPSHOT.md`. The broad search is over, so do not restart it unless a real error shows up. The remaining path is narrow.
+The broad search is done. Do not start it again unless we find a real error.
 
-## Priority 1: finish Lemma D without circular reasoning
+The remaining work is much smaller and more specific.
 
-The best route right now is the weight-two Hilbert Eisenstein argument for the last survivor `(90,0)`.
+## First: remove the last survivor
 
-### What has to be produced
+Only `(90,0)` is left.
 
-1. **The exact stabilized Eisenstein series**
-   - Base field: `Q(sqrt(5))`.
-   - Parallel weight: `2`.
-   - Level: `(3)^2(sqrt(5))^2`.
-   - Write down the local stabilization operators and the needed `U_p` eigenvalues.
+The best route right now is the Eisenstein series argument.
 
-2. **A table for every cusp**
-   - List all cusps for the exact congruence subgroup.
-   - Give each constant term symbolically and record its `7`-adic valuation.
-   - Checking only the cusp at infinity is not enough.
+What still has to be done:
 
-3. **The integral setup**
-   - Prove that the relevant `q`-expansions are integral over `Z_(7)`.
-   - State the exact `q`-expansion principle and check its assumptions.
+- write down the exact series at the level we use
+- list every cusp
+- compute the constant term at each cusp
+- check that all needed coefficients are integral at 7
+- show that the Hecke congruence reaches the stabilized forms we actually use
+- prove that the constant terms generate a 7-adic unit ideal
 
-4. **Transfer of the Hecke congruence**
-   - Show that matching Hecke eigenvalues away from the level gives a congruence between the correctly stabilized forms.
-   - Another option is to work directly in the integral Hecke algebra with the Eisenstein ideal.
+A key number is already known. Up to harmless units, the expected constant term is `16/15`, which is `2 mod 7`. That is good for the contradiction we want.
 
-5. **The unit-ideal contradiction**
-   - Prove that all cusp constant terms generate a `7`-adic unit ideal.
-   - Up to units, the expected generator is `16/15`, which is `2 mod 7`.
+But checking only the cusp at infinity is not enough. The proof has to cover every cusp.
 
-### When Lemma D can be called finished
+The argument is finished only when it clearly says:
 
-The written proof must give this chain:
+1. the cusp form is congruent to the Eisenstein form
+2. every Eisenstein constant term is zero mod 7
+3. this would force the whole constant-term ideal to be divisible by 7
+4. that is impossible because the ideal is a 7-adic unit
 
-```text
-cuspidal congruence
-  => every stabilized Eisenstein constant term is 0 mod 7
-  => the all-cusp constant-term ideal is divisible by 7
-  => contradiction, because that ideal is a 7-adic unit.
-```
+No shortcuts here. This is the main open point.
 
-It must cover weight `2`, the square level, every cusp and the actual stabilizations being used. No hand waving here, this is the main gap.
+## Backup route
 
-## Backup route: explicit RM correspondence
+There is another possible route through real multiplication.
 
-Use this only if the missing correspondence data become available.
+To use it, we would need:
 
-Needed:
+- an explicit correspondence on the curve or its Jacobian
+- the action of the RM generator
+- the missing residual matrix
+- a direct contradiction for `(90,0)`
 
-- an explicit correspondence on the quotient curve or its Jacobian;
-- the action of an RM generator on the relevant integral or torsion lattice;
-- the missing residual matrix;
-- a direct local contradiction for `(90,0)`.
+A source saying only that the Jacobian has RM is not enough. We need the actual action.
 
-A source saying that the Jacobian “has RM” is not enough. We need the action itself.
+Use this route only if new source material or code appears.
 
-## Priority 2: finish the JL/Brandt bridge
+## Second: finish the Brandt bridge
 
-Once Lemma D and irreducibility are done, connect the level-lowered residual systems to the exact Brandt modules used in the computation.
+After irreducibility is done, the proof still has to explain why the level-lowered systems are exactly the ones checked by our Brandt calculations.
 
-The write-up must cover:
+The final write-up should cover:
 
-- the exact weight, central character and level conventions;
-- the Hecke-equivariant Jacquet–Langlands identification;
-- oldspace and newspace;
-- how the Eisenstein part is removed or controlled;
-- multiplicity and generalized eigenspaces in characteristic `7`;
-- the norm-one quotient versus the central-character quotient;
-- prime labels and Hecke normalization at `11`, `19`, `29`;
-- extension of the residue field when needed.
+- the exact weight and level conventions
+- the Jacquet Langlands link
+- old and new parts
+- the Eisenstein part
+- multiplicity issues mod 7
+- the quotient used in the code
+- the prime labels at 11, 19 and 29
+- field extensions when they are needed
 
-Working file: `JL_BRANDT_THEOREM_BRIDGE.md`.
+The working file is `JL_BRANDT_THEOREM_BRIDGE.md`.
 
-## Priority 3: final local checks and cleanup
+## Third: cleanup and final checks
 
-- Finish the primitive zero, sign and valuation edge cases.
-- Check the variable translation `(a,b,c)=(B,-C,A)` everywhere.
-- Finish the integral local check at level `(2,2)`.
-- Re-run the deterministic certificates in a clean environment.
-- Merge the argument into one manuscript.
-- Remove old status lines that no longer match the current state.
+- check the zero, sign and valuation edge cases
+- check the variable change everywhere
+- finish the local check at level `(2,2)`
+- rerun the important scripts in a clean environment
+- remove old status lines that no longer match
+- merge the proof into one final manuscript
 
-## Do not redo these parts without a concrete reason
+## Parts that should not be redone without a reason
 
-Treat the following as stable unless a specific defect is found:
+These parts are stable for now:
 
-- the ray class group and all 360 characters;
-- the paired coordinates above `19`;
-- the corrected `t=1` toric splitting computation;
-- the reduction to the single survivor `(90,0)`;
-- the Brandt dimensions and zero-survivor results at all four levels;
-- the icosian, maximal-order and open-compact certificates.
+- the ray class group
+- all 360 characters
+- the paired coordinates above 19
+- the corrected toric splitting calculation at `t=1`
+- the reduction to `(90,0)`
+- the Brandt dimensions
+- the zero-survivor results at all four levels
+- the icosian and maximal-order checks
 
-## Restart checklist
+## Where to restart
 
-At the next session, read:
+Read these files first:
 
 1. `CURRENT_PROOF_SNAPSHOT.md`
 2. `P7_900_EISENSTEIN_NECESSITY_BRIDGE_AUDIT.md`
@@ -104,4 +96,6 @@ At the next session, read:
 4. `PROOF_ELEMENT_INDEX.md`
 5. `JL_BRANDT_THEOREM_BRIDGE.md`
 
-Then take the first unchecked Eisenstein item and work on that. Switch to the RM route only if new explicit data appear.
+Then take the first unfinished Eisenstein item and work on that. Switch to the RM route only if the missing explicit data turns up.
+
+That is the shortest honest path from the current state.

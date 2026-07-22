@@ -97,8 +97,10 @@ def local_hecke_matrix_t2(line: LocalProjectiveLine) -> list[dict[int, int]]:
     return rows
 
 
-def global_orbit_and_t2(exponent_at_3: int) -> tuple[list[int], list[dict[int, int]]]:
-    space = CRTProjectiveLine(exponent_at_3)
+def global_orbit_and_t2(
+    exponent_at_3: int, exponent_at_5: int = 3
+) -> tuple[list[int], list[dict[int, int]]]:
+    space = CRTProjectiveLine(exponent_at_3, exponent_at_5)
     left_split = LocalHamiltonSplitting.build(space.left.ring)
     right_split = LocalHamiltonSplitting.build(space.right.ring)
     unit_left = tuple(left_split.map(g) for g in icosian_group_generators())

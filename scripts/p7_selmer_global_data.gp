@@ -1,0 +1,14 @@
+default(parisize,"512M");
+x='x; y='y;
+Fpol=x^2-x-1;
+Cpol=polcyclo(7);
+comp=polcompositum(Fpol,Cpol,1);
+print("COMPOSITUM_COUNT=",#comp);
+T=comp[1][1];
+print("DEG=",poldegree(T));
+K=bnfinit(T,1);
+print("DISC=",K.disc);
+print("CLASS_GROUP=",K.clgp);
+print("UNITS_RANK=",#K.fu);
+print("UNITS=",K.fu);
+quit;

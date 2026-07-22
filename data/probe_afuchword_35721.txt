@@ -1,0 +1,4 @@
+LIB_bealk=t_VEC
+LIB_beala=t_VEC
+LIB_bealo=t_VEC
+ERROR=error("not a function in function call")

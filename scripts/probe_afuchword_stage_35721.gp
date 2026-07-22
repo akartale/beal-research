@@ -1,0 +1,15 @@
+default(parisize,"1G");
+default(parisizemax,"4G");
+out=fileopen("/workspace/research/beal/data/probe_afuchword_stage_35721.txt","w");
+filewrite(out,"STAGE0");
+install(afuchword,GG,afuchword,"/workspace/research/beal/vendor/fdom-upstream/libfdom-2-15-2.so");
+filewrite(out,Str("STAGE1 TYPE=",type(afuchword)));
+read("/workspace/research/beal/data/fdom_level35721_tuned.txt");
+filewrite(out,Str("STAGE2 PTYPE=",type(PRESENTATION)));
+chk=readbin("/workspace/research/beal/data/fdom_level35721_reconstruct_batched_v9_checkpoint.bin");
+filewrite(out,Str("STAGE3 CHKTYPE=",type(chk)," CHKLEN=",#chk));
+xx=chk[1];
+filewrite(out,Str("STAGE4 XXTYPE=",type(xx)," XXL=",#xx));
+wg=afuchword(xx,PRESENTATION[1][1]);
+filewrite(out,Str("STAGE5 WORD=",wg));
+fileclose(out);quit;
